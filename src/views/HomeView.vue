@@ -17,7 +17,7 @@
       <section class="ranking">
         <b-tabs v-model="activeTab">
           <b-tab-item :label="$t('游戏排行榜')">
-            <GameRank></GameRank>
+            <GameRank :item="item"></GameRank>
           </b-tab-item>
     
           <b-tab-item :label="$t('玩家排行榜')">
@@ -31,6 +31,7 @@
 <script>
 import GameRank from '@/components/HomeView/GameRank';
 import PlayerRank from '@/components/HomeView/PlayerRank';
+import { getPlayerRank } from '@/api'
 export default {
   name: 'HomeView',
 
@@ -40,12 +41,17 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      activeTab: 0,
+      item: {},
+    };
   },
 
   computed: {},
 
-  created() {},
+  async created() {
+    this.item = await getPlayerRank();
+  },
 
   methods: {},
 

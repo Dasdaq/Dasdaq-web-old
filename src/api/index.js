@@ -81,3 +81,8 @@ export const getUser = async (address) => {
     })),
   };
 };
+
+export const getPlayerRank = async () => {
+  const response = await axios.get(`${apiHost}/api/dapps`);
+  return response.data.data;
+};

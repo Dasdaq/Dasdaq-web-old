@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "PlayerRank",
+  name: "GameRank",
   components: {},
   
   data() {
@@ -12,38 +12,37 @@ export default {
       data: [
         {
           id: 1,
-          first_name: "Jesse",
-          last_name: "Simmons",
-          date: "2016-10-15 13:43:27",
-          gender: "Male"
+          player_address: "Jesse",
+          profitablity: "Simmons",
+          profit_game: "Cryptkitties",
         },
         {
           id: 2,
-          first_name: "John",
-          last_name: "Jacobs",
-          date: "2016-12-15 06:00:53",
-          gender: "Male"
+          player_address: "Jesse",
+          profitablity: "Simmons",
+          profit_game: "Cryptkitties",
+ 
         },
         {
           id: 3,
-          first_name: "Tina",
-          last_name: "Gilbert",
-          date: "2016-04-26 06:26:28",
-          gender: "Female"
+          player_address: "Jesse",
+          profitablity: "Simmons",
+          profit_game: "Cryptkitties",
+
         },
         {
           id: 4,
-          first_name: "Clarence",
-          last_name: "Flores",
-          date: "2016-04-10 10:28:46",
-          gender: "Male"
+          player_address: "Jesse",
+          profitablity: "Simmons",
+          profit_game: "Cryptkitties",
+
         },
         {
           id: 5,
-          first_name: "Anne",
-          last_name: "Lee",
-          date: "2016-12-06 14:38:38",
-          gender: "Female"
+          player_address: "Jesse",
+          profitablity: "Simmons",
+          profit_game: "Cryptkitties",
+
         }
       ],
       columns: [
@@ -54,22 +53,18 @@ export default {
           numeric: true
         },
         {
-          field: "first_name",
-          label: "First Name"
+          field: "player_address",
+          label: "玩家地址"
         },
         {
-          field: "last_name",
-          label: "Last Name"
+          field: "profitablity",
+          label: "盈利情况"
         },
         {
-          field: "date",
-          label: "Date",
+          field: "profit_game",
+          label: "盈利最多游戏",
           centered: true
         },
-        {
-          field: "gender",
-          label: "Gender"
-        }
       ]
     };
   },
