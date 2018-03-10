@@ -1,3 +1,70 @@
 {
-  "hello world": "世界你好"
+  "header": {
+    "nav": {
+      "siteName": "DapDap",
+      "myPage": "我的",
+      "submitApp": "提交Dapp",
+      "signIn": "登录"
+    }
+  },
+  "ItemView": {
+    "dAppSite": "官方网站",
+    "publishDate": "发布时间：",
+    "contact": "联系方式：",
+    "tabs": {
+      "transaction": {
+        "title": "交易统计",
+        "overviewTitle": "概览",
+        "balance": "合约余额",
+        "volumeLastDay": "24小时交易额(ETH)",
+        "volumeLastWeek": "7天交易额(ETH)",
+        "txLastDay": "24小时交易笔数",
+        "txLastWeek": "7天交易笔数",
+        "dauLastDay": "日活跃用户数",
+        "chartTitle": "历史详情",
+        "plays": "用户数",
+        "totalVolume": "总交易额(ETH)",
+        "transactionsCount": "交易笔数",
+        "totalGasCost": "总消耗Gas(ETH)",
+        "h1": "最近1小时",
+        "d1": "最近24小时",
+        "d7": "最近7天"
+      },
+      "player": {
+        "title": "用户统计",
+        "winListTitle": "赚钱榜",
+        "lossListTitle": "赔钱榜",
+        "index": "排名",
+        "value": "ETH",
+        "address": "玩家",
+        "message": "评价"
+      },
+      "contract": {
+        "title": "合约",
+        "index": "序号",
+        "address": "合约地址"
+      },
+      "comment": "讨论"
+    }
+  },
+  "UserView": {
+    "address": "账户地址",
+    "balance": "账户余额",
+    "income": "DApp总收益",
+    "tabs": {
+      "playedDApps": {
+        "title": "玩过的DApps",
+        "index": "序号",
+        "name": "DApp",
+        "income": "收益(ETH)"
+      },
+      "messageBoard": {
+        "title": "留言板"
+      }
+    }
+  },
+  "Error": {
+    "METAMASK_LOCKED": "请解锁您的Metamask",
+    "NO_METAMASK": "请使用Chrome或火狐浏览器，并且安装Metamask插件"
+  }
 }
