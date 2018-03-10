@@ -7,6 +7,27 @@
       "signIn": "登录"
     }
   },
+  "HomeView": {
+    "hero": {
+      "title": "DapDap区块链游戏榜",
+      "subtitle": "区块链游戏及玩家交易信息平台"
+    },
+    "appList": {
+      "tabTitle": "应用排行榜",
+      "index": "排名",
+      "title": "应用名",
+      "category": "类别",
+      "balance": "合约余额",
+      "volumeLastDay": "24小时交易额(ETH)",
+      "volumeLastWeek": "7天交易额(ETH)",
+      "txLastDay": "24小时交易笔数",
+      "txLastWeek": "7天交易笔数",
+      "dauLastDay": "日活跃用户数"
+    },
+    "userList": {
+      "tabTitle": "用户排行榜"
+    }
+  },
   "ItemView": {
     "dAppSite": "官方网站",
     "publishDate": "发布时间：",
