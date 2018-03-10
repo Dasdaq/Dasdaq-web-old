@@ -4,6 +4,8 @@ import Vue from 'vue';
 import vueConfig from 'vue-config';
 import config from '@/config';
 import 'normalize.css';
+// https://github.com/ecomfe/vue-echarts/blob/master/demo/Demo.vue
+import ECharts from 'vue-echarts/components/ECharts';
 import App from './App';
 import router from './router';
 import store from './store';
@@ -12,6 +14,7 @@ import i18n from './i18n';
 Vue.config.productionTip = false;
 
 Vue.use(vueConfig, config);
+Vue.component('ECharts', ECharts);
 
 const app = new Vue({
   el: '#app',
