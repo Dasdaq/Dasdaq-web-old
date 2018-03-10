@@ -1,81 +1,90 @@
 <template>
   <main class="ItemView">
-
-    <div class="middle item-hero">
-      <div class="content">
+    <section class="hero is-primary">
+      <div class="hero-body">
         <div class="columns is-desktop">
           <div class="column is-three-quarters-desktop is-two-thirds-tablet">
-            <h1>{{item.title}}</h1>
-            <span class="category">{{item.category}}</span>
+            <h1 class="title">{{item.title}}</h1>
+            <span class="item-category tag is-warning is-uppercase is-medium">{{item.category}}</span>
           </div>
-          <div class="column">
+          <div class="column item-siteBtnWrapper">
             <a class="button is-primary is-inverted is-outlined"
                target="_blank"
                :href="item.url">
               {{$t('ItemView.dAppSite')}}</a>
           </div>
         </div>
-        <p>
-          <span class="icon item"><img style="background: #4fd2b3;border-radius:50%;"
+
+        <h2 v-if="false"
+            class="subtitle">
+          Primary bold subtitle
+        </h2>
+
+        <div class="info-item">
+          <span class="icon info-icon">
+            <img style="border-radius:50%;"
                  src="/static/images/header/time.png"
-                 alt="time" /></span>
-          {{$t('ItemView.publishDate')}}
-          <span>{{item.createdAt}}</span>
-        </p>
-        <div class="">
-          <span class="icon item1 item"><img style="background: #4fd2b3;border-radius:50%;"
-                 src="/static/images/header/tel.png"
-                 alt="tel" /></span>
-          {{$t('ItemView.contact')}}
-          <label class="">
-            <a href="">
-              <span class="icon"><img src="/static/images/header/twitter.png"
-                     alt="twitter" /></span>
-            </a>
-            <a href="">
-              <span class="icon"><img src="/static/images/header/Reddit.png"
-                     alt="reddit" /></span>
-            </a>
-            <a href="">
-              <span class="icon"><img src="/static/images/header/Telegram.png"
-                     alt="telegram" /></span>
-            </a>
-            <a href="">
-              <span class="icon"><img src="/static/images/header/WeChat.png"
-                     alt="wechat" /></span>
-            </a>
-            <a href="">
-              <span class="icon"><img src="/static/images/header/weibo.png"
-                     alt="weibo" /></span>
-            </a>
-          </label>
+                 alt="time" />
+          </span>
+          <span class="info-title">{{$t('ItemView.publishDate')}}</span>
+          <span class="info-content">{{item.createdAt}}</span>
         </div>
 
+        <div class="info-item">
+          <span class="icon info-icon">
+            <img style="border-radius:50%;"
+                 src="/static/images/header/tel.png"
+                 alt="time" />
+          </span>
+          <span class="info-title">{{$t('ItemView.contact')}}</span>
+          <span class="info-content">
+            <label class="">
+              <a href="">
+                <span class="icon"><img src="/static/images/header/twitter.png"
+                       alt="twitter" /></span>
+              </a>
+              <a href="">
+                <span class="icon"><img src="/static/images/header/Reddit.png"
+                       alt="reddit" /></span>
+              </a>
+              <a href="">
+                <span class="icon"><img src="/static/images/header/Telegram.png"
+                       alt="telegram" /></span>
+              </a>
+              <a href="">
+                <span class="icon"><img src="/static/images/header/WeChat.png"
+                       alt="wechat" /></span>
+              </a>
+              <a href="">
+                <span class="icon"><img src="/static/images/header/weibo.png"
+                       alt="weibo" /></span>
+              </a>
+            </label>
+          </span>
+        </div>
       </div>
-
-    </div>
-
-    <section>
-      <b-tabs v-model="activeTab">
-        <b-tab-item :label="$t('ItemView.tabs.transaction.title')">
-          <TransactionStatistics :itemId="id"
-                                 :item="item" />
-        </b-tab-item>
-
-        <b-tab-item :label="$t('ItemView.tabs.player.title')">
-          <PlayerStatistics :itemId="id" />
-        </b-tab-item>
-
-        <b-tab-item :label="$t('ItemView.tabs.contract.title')">
-          <ContractList :itemId="id" />
-        </b-tab-item>
-
-        <b-tab-item :label="$t('ItemView.tabs.comment')">
-          <Disqus :shortname="$config.disqus.shortname"
-                  :identifier="'dapp-'+id"></Disqus>
-        </b-tab-item>
-      </b-tabs>
     </section>
+    <br/>
+
+    <b-tabs v-model="activeTab">
+      <b-tab-item :label="$t('ItemView.tabs.transaction.title')">
+        <TransactionStatistics :itemId="id"
+                               :item="item" />
+      </b-tab-item>
+
+      <b-tab-item :label="$t('ItemView.tabs.player.title')">
+        <PlayerStatistics :itemId="id" />
+      </b-tab-item>
+
+      <b-tab-item :label="$t('ItemView.tabs.contract.title')">
+        <ContractList :itemId="id" />
+      </b-tab-item>
+
+      <b-tab-item :label="$t('ItemView.tabs.comment')">
+        <Disqus :shortname="$config.disqus.shortname"
+                :identifier="'dapp-'+id"></Disqus>
+      </b-tab-item>
+    </b-tabs>
   </main>
 
 </template>
@@ -121,22 +130,32 @@ export default {
 </script>
 
 <style scoped>
-.item-hero {
+.hero {
   width: 100vw;
   transform: translateX(-5%);
 }
-.middle {
-  background: #4fd2b3;
+.hero-body {
+  padding: 3rem 5%;
 }
-.content {
-  background: #4fd2b3;
-  padding: 6% 0 2% 12%;
-  color: #fff;
-  font-size: 0.8em;
-  margin-bottom: 0;
+.item-siteBtnWrapper {
+  text-align: right;
 }
-h1 {
-  color: #fff;
+.item-category {
+  position: relative;
+  top: -1.5em;
+  left: 1em;
+}
+.info-item {
+  margin: 0.6em;
+}
+.info-icon {
+  vertical-align: middle;
+}
+.info-title {
+  vertical-align: middle;
+  margin-left: 0.2em;
+}
+.title {
   font-weight: 700;
   font-size: 3em;
   display: inline;
@@ -144,46 +163,5 @@ h1 {
 label {
   display: inline-block;
   vertical-align: middle;
-}
-a {
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  cursor: pointer;
-}
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.category {
-  display: inline-block;
-  font-size: 1.2em;
-  vertical-align: top;
-  margin-left: 1.2em;
-  padding: 0 0.8em;
-  background: #fff;
-  color: #4fd2b3;
-}
-.icon {
-  margin: 0 0.1em;
-}
-.item {
-  vertical-align: bottom;
-  margin-right: 0.2em;
-}
-.item1 {
-  vertical-align: top;
-}
-.tabs ul li {
-  color: #fff;
-  background: #4fd2b3;
-}
-.tabs {
-  padding: 0.1em 12%;
-}
-.tabs li.is-active a {
-  color: #fff;
-  border-bottom-color: #000;
 }
 </style>
