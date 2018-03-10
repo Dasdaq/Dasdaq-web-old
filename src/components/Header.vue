@@ -7,16 +7,16 @@
           <img src="../assets/logo.png"
                :alt="$t('header.nav.siteName')" />
         </router-link>
-        <router-link v-if="!me"
+        <router-link v-if="me"
                      class="navbar-item"
-                     :to="{ name: 'Login'}">
-          <img src="../assets/avatar.png" /> &nbsp;{{$t('header.nav.signIn')}}
+                     :to="{ name: 'UserView', params:{address: me.address}}">
+          <img src="../assets/avatar.png" /> &nbsp;&nbsp;{{$t('header.nav.myPage')}}
         </router-link>
-        <router-link v-else
-                     class="navbar-item"
-                     :to="{ name: 'UserView', params:{ address: me.address }}">
-          <img src="../assets/avatar.png" /> &nbsp;{{$t('header.nav.myPage')}}
-        </router-link>
+        <a v-else
+           class="navbar-item"
+           @click="onSignIn">
+          <img src="../assets/avatar.png" /> &nbsp;&nbsp;{{$t('header.nav.signIn')}}
+        </a>
       </div>
 
       <div class="navbar-end">
@@ -57,12 +57,18 @@ export default {
   },
 
   computed: {
-    ...mapState(['me']),
+    ...mapState(['me', 'signInError']),
   },
 
-  created() {},
+  created() {
+    this.$store.dispatch('FETCH_ME');
+  },
 
-  methods: {},
+  methods: {
+    onSignIn() {
+      this.$dialog.alert(this.$t(`Error.${this.signInError}`));
+    },
+  },
 
   watch: {},
 };
