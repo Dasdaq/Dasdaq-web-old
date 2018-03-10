@@ -11,10 +11,13 @@
 
 // Using Constants for Mutation Types
 // import * as types from './mutation-types';
+import { i18n } from '@/config';
 
 export default {
   setLocale(state, locale) {
-    state.locale = locale;
+    const isValid = i18n.some(item => (item.locale === locale));
+    if (isValid) state.locale = locale;
+    else throw Error('INVALID_LOCALE');
   },
   SET_ME(state, me) {
     state.me = me;
