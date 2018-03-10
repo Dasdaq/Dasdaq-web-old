@@ -5,7 +5,7 @@
     <section>
       <b-tabs v-model="activeTab">
         <b-tab-item :label="$t('itemView.tabs.transaction')">
-          Transaction
+          <TransactionStatistics :itemId="id" />
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.comment')">
@@ -28,12 +28,14 @@
 
 <script>
 import Disqus from 'vue-disqus/VueDisqus';
+import TransactionStatistics from '@/components/TransactionStatistics';
 
 export default {
   name: 'ItemView',
 
   components: {
     Disqus,
+    TransactionStatistics,
   },
 
   data() {
