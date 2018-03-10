@@ -2,12 +2,12 @@
   <div class="PlayerStatistics">
     <div class="columns">
       <div class="column is-half">
-        <h2 class="subtitle is-5">{{ $t('playerStatistics.title.win') }}</h2>
+        <h2 class="subtitle is-5">{{ $t('ItemView.tabs.player.winListTitle') }}</h2>
         <PlayerStatisticsTable :tableData="winList" />
       </div>
 
       <div class="column is-half">
-        <h2 class="subtitle is-5 has-text-danger">{{ $t('playerStatistics.title.loss') }}</h2>
+        <h2 class="subtitle is-5 has-text-danger">{{ $t('ItemView.tabs.player.lossListTitle') }}</h2>
         <PlayerStatisticsTable :tableData="lossList" />
       </div>
     </div>
@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import PlayerStatisticsTable from '@/components/PlayerStatisticsTable';
 import { getPlayers } from '@/api';
+import PlayerStatisticsTable from './PlayerStatisticsTable';
 
 export default {
   name: 'PlayerStatistics',

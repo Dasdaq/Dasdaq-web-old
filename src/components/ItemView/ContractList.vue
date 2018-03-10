@@ -4,12 +4,12 @@
              :data="contracts"
              :mobile-cards="false">
       <template slot-scope="props">
-        <b-table-column :label="$t('ContractTable.index')"
+        <b-table-column :label="$t('ItemView.tabs.contract.index')"
                         width="60">
           {{ props.index+1 }}
         </b-table-column>
         <b-table-column field="address"
-                        :label="$t('ContractTable.address')">
+                        :label="$t('ItemView.tabs.contract.address')">
           <a :href="props.row.link">{{ props.row.address }}</a>
         </b-table-column>
       </template>

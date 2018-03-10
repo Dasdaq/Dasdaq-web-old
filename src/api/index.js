@@ -34,8 +34,13 @@ export const getMe = async () => {
 
 export const getPlayers = async (itemId) => {
   const response = await axios.get(`${apiHost}/api/dapps/${itemId}/top`);
-  const data = response.data.data.data;
+  const data = response.data.data;
   // format
+  ['win', 'loss'].forEach((key) => {
+    data[key].forEach((v) => {
+      v.value = Number(web3.fromWei(v.value, 'ether')).toFixed(2);
+    });
+  });
   return {
     winList: data.win,
     lossList: data.loss,
@@ -49,14 +54,30 @@ export const getContracts = async (itemId) => {
 
 export const getItem = async (itemId) => {
   const response = await axios.get(`${apiHost}/api/dapps/${itemId}`);
+  // format
+  const d = response.data.data;
+  ['h1', 'd1', 'd7'].forEach((k1) => {
+    d[k1].forEach((v) => {
+      ['totalGasCost', 'totalVolume'].forEach((k2) => {
+        v[k2] = Number(web3.fromWei(v[k2], 'ether')).toFixed(2);
+      });
+    });
+  });
+
   return response.data.data;
 };
 
-export const getUser = async address => ({
-  address,
-  balance: 22.12,
-  income: -11,
-  playedDApps: [
-    { id: 1, name: 'xxx', income: -9.22 },
-    { id: 2, name: 'yy', income: 10.22 }],
-});
+export const getUser = async (address) => {
+  const response = await axios.get(`${apiHost}/api/user/${address.toLowerCase()}`);
+  const d = response.data;
+  return {
+    address,
+    balance: d.balance,
+    income: Number(web3.fromWei(d.total, 'ether')).toFixed(5),
+    playedDApps: d.data.map(v => ({
+      id: v.id,
+      income: Number(web3.fromWei(v.value, 'ether')).toFixed(5),
+      name: v.name,
+    })),
+  };
+};

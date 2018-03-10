@@ -5,13 +5,12 @@
              :mobile-cards="false">
       <template slot-scope="props">
         <b-table-column field="index"
-                        :label="$t('playerStatistics.table.index')"
-                        width="60"
-                        numeric>
+                        :label="$t('ItemView.tabs.player.index')"
+                        width="60">
           {{ props.row.index }}
         </b-table-column>
         <b-table-column field="address"
-                        :label="$t('playerStatistics.table.address')"
+                        :label="$t('ItemView.tabs.player.address')"
                         width="100">
           <router-link :to="{
                   name: 'UserView',
@@ -20,12 +19,12 @@
           </router-link>
         </b-table-column>
         <b-table-column field="value"
-                        :label="$t('playerStatistics.table.value')"
+                        :label="$t('ItemView.tabs.player.value')"
                         width="110">
-          {{ props.row.value*-1 | weiToETH(2)}}
+          {{ props.row.value }}
         </b-table-column>
         <b-table-column field="message"
-                        :label="$t('playerStatistics.table.message')"
+                        :label="$t('ItemView.tabs.player.message')"
                         class="player-message">
           {{ props.row.message }}
         </b-table-column>
@@ -35,8 +34,6 @@
 </template>
 
 <script>
-import web3 from '@/web3';
-
 export default {
   name: 'PlayerStatisticsTable',
 
@@ -55,16 +52,6 @@ export default {
   methods: {},
 
   watch: {},
-
-  filters: {
-    weiToETH: (valueInWei, fixed) => {
-      const valueInETH = web3.fromWei(valueInWei, 'ether');
-      if (fixed !== undefined) {
-        return Number(valueInETH).toFixed(fixed);
-      }
-      return valueInETH;
-    },
-  },
 };
 </script>
 

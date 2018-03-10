@@ -17,35 +17,35 @@
         </div>
         <p>
           <span class="icon item"><img style="background: #4fd2b3;border-radius:50%;"
-                 src="../../static/images/header/time.png"
+                 src="/static/images/header/time.png"
                  alt="time" /></span>
           {{$t('ItemView.publishDate')}}
           <span>{{item.createdAt}}</span>
         </p>
         <div class="">
           <span class="icon item1 item"><img style="background: #4fd2b3;border-radius:50%;"
-                 src="../../static/images/header/tel.png"
+                 src="/static/images/header/tel.png"
                  alt="tel" /></span>
           {{$t('ItemView.contact')}}
           <label class="">
             <a href="">
-              <span class="icon"><img src="../../static/images/header/twitter.png"
+              <span class="icon"><img src="/static/images/header/twitter.png"
                      alt="twitter" /></span>
             </a>
             <a href="">
-              <span class="icon"><img src="../../static/images/header/Reddit.png"
+              <span class="icon"><img src="/static/images/header/Reddit.png"
                      alt="reddit" /></span>
             </a>
             <a href="">
-              <span class="icon"><img src="../../static/images/header/Telegram.png"
+              <span class="icon"><img src="/static/images/header/Telegram.png"
                      alt="telegram" /></span>
             </a>
             <a href="">
-              <span class="icon"><img src="../../static/images/header/WeChat.png"
+              <span class="icon"><img src="/static/images/header/WeChat.png"
                      alt="wechat" /></span>
             </a>
             <a href="">
-              <span class="icon"><img src="../../static/images/header/weibo.png"
+              <span class="icon"><img src="/static/images/header/weibo.png"
                      alt="weibo" /></span>
             </a>
           </label>
@@ -57,22 +57,22 @@
 
     <section>
       <b-tabs v-model="activeTab">
-        <b-tab-item :label="$t('itemView.tabs.transaction')">
+        <b-tab-item :label="$t('ItemView.tabs.transaction.title')">
           <TransactionStatistics :itemId="id"
                                  :item="item" />
         </b-tab-item>
 
-        <b-tab-item :label="$t('itemView.tabs.comment')">
-          <Disqus :shortname="$config.disqus.shortname"
-                  :identifier="'dapp-'+id"></Disqus>
-        </b-tab-item>
-
-        <b-tab-item :label="$t('itemView.tabs.player')">
+        <b-tab-item :label="$t('ItemView.tabs.player.title')">
           <PlayerStatistics :itemId="id" />
         </b-tab-item>
 
-        <b-tab-item :label="$t('itemView.tabs.contract')">
+        <b-tab-item :label="$t('ItemView.tabs.contract.title')">
           <ContractList :itemId="id" />
+        </b-tab-item>
+
+        <b-tab-item :label="$t('ItemView.tabs.comment')">
+          <Disqus :shortname="$config.disqus.shortname"
+                  :identifier="'dapp-'+id"></Disqus>
         </b-tab-item>
       </b-tabs>
     </section>
@@ -81,11 +81,11 @@
 </template>
 
 <script>
-import Disqus from 'vue-disqus/VueDisqus';
-import TransactionStatistics from '@/components/TransactionStatistics';
-import PlayerStatistics from '@/components/PlayerStatistics';
-import ContractList from '@/components/ItemView/ContractList';
 import { getItem } from '@/api';
+import Disqus from 'vue-disqus/VueDisqus';
+import TransactionStatistics from './TransactionStatistics';
+import PlayerStatistics from './PlayerStatistics';
+import ContractList from './ContractList';
 
 export default {
   name: 'ItemView',
@@ -121,6 +121,10 @@ export default {
 </script>
 
 <style scoped>
+.item-hero {
+  width: 100vw;
+  transform: translateX(-4rem);
+}
 .middle {
   background: #4fd2b3;
 }
