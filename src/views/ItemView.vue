@@ -1,29 +1,32 @@
 <template>
   <main class="ItemView">
 
-    <div class="middle">
+    <div class="middle item-hero">
       <div class="content">
         <div class="columns is-desktop">
           <div class="column is-three-quarters-desktop is-two-thirds-tablet">
-            <h1>ForkDelta</h1>
-            <span class="category">游戏</span>
+            <h1>{{item.title}}</h1>
+            <span class="category">{{item.category}}</span>
           </div>
           <div class="column">
-            <a class="button is-primary is-inverted is-outlined">平台官网</a>
+            <a class="button is-primary is-inverted is-outlined"
+               target="_blank"
+               :href="item.url">
+              {{$t('ItemView.dAppSite')}}</a>
           </div>
         </div>
         <p>
           <span class="icon item"><img style="background: #4fd2b3;border-radius:50%;"
                  src="../../static/images/header/time.png"
                  alt="time" /></span>
-          上线时间：
-          <span>2017-8-29</span>
+          {{$t('ItemView.publishDate')}}
+          <span>{{item.createdAt}}</span>
         </p>
         <div class="">
           <span class="icon item1 item"><img style="background: #4fd2b3;border-radius:50%;"
                  src="../../static/images/header/tel.png"
                  alt="tel" /></span>
-          联系方式：
+          {{$t('ItemView.contact')}}
           <label class="">
             <a href="">
               <span class="icon"><img src="../../static/images/header/twitter.png"
@@ -55,12 +58,13 @@
     <section>
       <b-tabs v-model="activeTab">
         <b-tab-item :label="$t('itemView.tabs.transaction')">
-          <TransactionStatistics :itemId="id" />
+          <TransactionStatistics :itemId="id"
+                                 :item="item" />
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.comment')">
           <Disqus :shortname="$config.disqus.shortname"
-                  :identifier="id"></Disqus>
+                  :identifier="'dapp-'+id"></Disqus>
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.player')">
@@ -81,6 +85,7 @@ import Disqus from 'vue-disqus/VueDisqus';
 import TransactionStatistics from '@/components/TransactionStatistics';
 import PlayerStatistics from '@/components/PlayerStatistics';
 import ContractList from '@/components/ItemView/ContractList';
+import { getItem } from '@/api';
 
 export default {
   name: 'ItemView',
@@ -95,6 +100,7 @@ export default {
   data() {
     return {
       activeTab: 0,
+      item: {},
     };
   },
 
@@ -104,7 +110,9 @@ export default {
     },
   },
 
-  created() {},
+  async created() {
+    this.item = await getItem(this.id);
+  },
 
   methods: {},
 

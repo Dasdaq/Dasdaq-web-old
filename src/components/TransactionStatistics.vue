@@ -3,46 +3,12 @@
     <h2 class="subtitle is-5">{{ $t('transactionStatistics.title.today') }}</h2>
     <div class="box">
       <nav class="level">
-        <div class="level-item has-text-centered">
+        <div v-for="key in indicators"
+             :key="key"
+             class="level-item has-text-centered">
           <div>
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Following</p>
-            <p class="title">123</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Followers</p>
-            <p class="title">456K</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Likes</p>
-            <p class="title">789</p>
+            <p class="heading">{{ $t('transactionStatistics.'+key) }}</p>
+            <p class="title">{{item[key]}}</p>
           </div>
         </div>
       </nav>
@@ -63,6 +29,8 @@ export default {
   name: 'TransactionStatistics',
 
   components: {},
+
+  props: ['itemId', 'item'],
 
   data() {
     return {
@@ -86,7 +54,18 @@ export default {
     };
   },
 
-  computed: {},
+  computed: {
+    indicators() {
+      return [
+        'balance',
+        'dauLastDay',
+        'volumeLastDay',
+        'volumeLastWeek',
+        'txLastDay',
+        'txLastWeek',
+      ];
+    },
+  },
 
   created() {},
 
