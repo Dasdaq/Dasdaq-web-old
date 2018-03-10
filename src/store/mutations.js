@@ -16,6 +16,12 @@ export default {
   setLocale(state, locale) {
     state.locale = locale;
   },
+  SET_ME(state, me) {
+    state.me = me;
+  },
+  SET_SIGN_IN_ERROR(state, error) {
+    state.signInError = error;
+  },
   /* Examples:
   [types.ADD_TO_CART](state, payload) {
     state.cart.push(payload);
