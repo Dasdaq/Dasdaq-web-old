@@ -18,7 +18,7 @@
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.contract')">
-          Contract
+          <ContractList :itemId="id" />
         </b-tab-item>
       </b-tabs>
     </section>
@@ -30,6 +30,7 @@
 import Disqus from 'vue-disqus/VueDisqus';
 import TransactionStatistics from '@/components/TransactionStatistics';
 import PlayerStatistics from '@/components/PlayerStatistics';
+import ContractList from '@/components/ItemView/ContractList';
 
 export default {
   name: 'ItemView',
@@ -38,6 +39,7 @@ export default {
     Disqus,
     TransactionStatistics,
     PlayerStatistics,
+    ContractList,
   },
 
   data() {
