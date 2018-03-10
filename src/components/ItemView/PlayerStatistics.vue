@@ -7,7 +7,8 @@
       </div>
 
       <div class="column is-half">
-        <h2 class="subtitle is-5 has-text-danger">{{ $t('ItemView.tabs.player.lossListTitle') }}</h2>
+        <h2 class="subtitle is-5 has-text-danger">
+          {{ $t('ItemView.tabs.player.lossListTitle') }}</h2>
         <PlayerStatisticsTable :tableData="lossList" />
       </div>
     </div>

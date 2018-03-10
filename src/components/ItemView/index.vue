@@ -5,7 +5,8 @@
         <div class="columns is-desktop">
           <div class="column is-three-quarters-desktop is-two-thirds-tablet">
             <h1 class="title">{{item.title}}</h1>
-            <span class="item-category tag is-warning is-uppercase is-medium">{{item.category}}</span>
+            <span class="item-category tag is-warning
+                        is-uppercase is-medium">{{item.category}}</span>
           </div>
           <div class="column item-siteBtnWrapper">
             <a class="button is-primary is-inverted is-outlined"

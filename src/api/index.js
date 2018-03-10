@@ -38,6 +38,7 @@ export const getPlayers = async (itemId) => {
   // format
   ['win', 'loss'].forEach((key) => {
     data[key].forEach((v) => {
+      // eslint-disable-next-line no-param-reassign
       v.value = Number(web3.fromWei(v.value, 'ether')).toFixed(2);
     });
   });
@@ -59,6 +60,7 @@ export const getItem = async (itemId) => {
   ['h1', 'd1', 'd7'].forEach((k1) => {
     d[k1].forEach((v) => {
       ['totalGasCost', 'totalVolume'].forEach((k2) => {
+        // eslint-disable-next-line no-param-reassign
         v[k2] = Number(web3.fromWei(v[k2], 'ether')).toFixed(2);
       });
     });
@@ -85,9 +87,11 @@ export const getUser = async (address) => {
 export const getPlayerRank = async () => {
   const response = await axios.get(`${apiHost}/api/dapps`);
   const d = response.data.data;
+
   d.forEach((v) => {
     ['txLastWeek', 'balance', 'volumeLastDay', 'volumeLastWeek',
       'txLastWeek', 'txLastDay', 'dauLastDay', 'balance'].forEach((key) => {
+      // eslint-disable-next-line no-param-reassign
       v[key] = Number(v[key]);
     });
   });
