@@ -12,3 +12,5 @@ export const i18n = [{
 export const disqus = {
   shortname: 'dapdap',
 };
+
+export const apiHost = 'http://10.30.4.57:5000';

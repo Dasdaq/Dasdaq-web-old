@@ -2,6 +2,7 @@ import Promise from 'bluebird';
 import Cookie from 'js-cookie';
 import axios from 'axios';
 import web3 from '@/web3';
+import { apiHost } from '@/config';
 
 export const getLocale = () => {
   const locale = Cookie.get('locale') || (navigator.language || navigator.browserLanguage || navigator.userLanguage).toLowerCase();
@@ -29,4 +30,14 @@ export const getMe = async () => {
     return me;
   }
   throw Error('METAMASK_LOCKED');
+};
+
+export const getPlayers = async (itemId) => {
+  const response = await axios.get(`${apiHost}/api/dapps/${itemId}/top`);
+  const data = response.data.data.data;
+  // format
+  return {
+    winList: data.win,
+    lossList: data.loss,
+  };
 };
