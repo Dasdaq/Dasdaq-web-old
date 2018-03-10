@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bignumber.js": "^6.0.0",
     "echarts": "^4.0.4",
     "js-cookie": "^2.2.0",
     "normalize.css": "^7.0.0",
@@ -25,7 +26,8 @@
     "vue-echarts": "^3.0.4",
     "vue-i18n": "^7.4.0",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "web3": "0.20.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.0.2",
