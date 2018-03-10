@@ -1,3 +1,70 @@
 {
-  "hello world": "hello world"
+  "header": {
+    "nav": {
+      "siteName": "DapDap",
+      "myPage": "Profile",
+      "submitApp": "Submit Dapp",
+      "signIn": "login"
+    }
+  },
+  "ItemView": {
+    "dAppSite": "Official website",
+    "publishDate": "release time：",
+    "contact": "Contact：",
+    "tabs": {
+      "transaction": {
+        "title": "Transaction statistics",
+        "overviewTitle": "Overview",
+        "balance": "Contract balance",
+        "volumeLastDay": "24-hour transaction amount(ETH)",
+        "volumeLastWeek": "7 days transaction amount(ETH)",
+        "txLastDay": "24 hours trading",
+        "txLastWeek": "7 days trading",
+        "dauLastDay": "Daily active users",
+        "chartTitle": "History details",
+        "plays": "Users",
+        "totalVolume": "Total transaction amount(ETH)",
+        "transactionsCount": "Number of transactions",
+        "totalGasCost": "Total consumption of Gas(ETH)",
+        "h1": "Last hour",
+        "d1": "Last 24 hours",
+        "d7": "Last 7 days"
+      },
+      "player": {
+        "title": "User Statistics",
+        "winListTitle": "Make money list",
+        "lossListTitle": "Lose money list",
+        "index": "Rank",
+        "value": "ETH",
+        "address": "Players",
+        "message": "Evaluation"
+      },
+      "contract": {
+        "title": "contract",
+        "index": "No.",
+        "address": "Contract address"
+      },
+      "comment": "discuss"
+    }
+  },
+  "UserView": {
+    "address": "Account address",
+    "balance": "Account Balance",
+    "income": "DApp total revenue",
+    "tabs": {
+      "playedDApps": {
+        "title": "Played DApps",
+        "index": "No.",
+        "name": "DApp",
+        "income": "income(ETH)"
+      },
+      "messageBoard": {
+        "title": "message board"
+      }
+    }
+  },
+  "Error": {
+    "METAMASK_LOCKED": "Please unlock your Metamask",
+    "NO_METAMASK": "Please use Chrome or Firefox and install the Metamask plugin"
+  }
 }
