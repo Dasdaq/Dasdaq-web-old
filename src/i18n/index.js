@@ -4,16 +4,19 @@ import { i18n } from '@/config';
 
 Vue.use(VueI18n);
 
+let defaultLocale = i18n[0].locale;
 const messages = {};
 
 i18n.forEach((item) => {
   // eslint-disable-next-line
-  const locale = require(`./locales/${item.locale}.json`);
-  messages[item.locale] = locale;
+  messages[item.locale] = require(`./locales/${item.locale}.json`);
+  if (item.default) {
+    defaultLocale = item.locale;
+  }
 });
 
 export default new VueI18n({
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: defaultLocale,
+  fallbackLocale: defaultLocale,
   messages,
 });
