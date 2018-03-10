@@ -8342,6 +8342,10 @@ vue-config@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-config/-/vue-config-1.0.0.tgz#f6e6704845808fbfa3b17300fc7ffd624c2ca42e"
 
+vue-disqus@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-2.0.4.tgz#bee0ba3421202a0980e3cd81e357535d3816fa55"
+
 vue-echarts@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/vue-echarts/-/vue-echarts-3.0.4.tgz#63b3ef5fc19cdf5e45e251d3f442069d0836013e"

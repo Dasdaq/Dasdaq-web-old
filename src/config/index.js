@@ -8,3 +8,7 @@ export const i18n = [{
   langDisplay: 'English',
   locale: 'en',
 }];
+
+export const disqus = {
+  shortname: 'dapdap',
+};

@@ -9,7 +9,8 @@
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.comment')">
-          Comment
+          <Disqus :shortname="$config.disqus.shortname"
+                  :identifier="id"></Disqus>
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.player')">
@@ -26,10 +27,14 @@
 </template>
 
 <script>
+import Disqus from 'vue-disqus/VueDisqus';
+
 export default {
   name: 'ItemView',
 
-  components: {},
+  components: {
+    Disqus,
+  },
 
   data() {
     return {
