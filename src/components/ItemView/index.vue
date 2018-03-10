@@ -123,7 +123,7 @@ export default {
 <style scoped>
 .item-hero {
   width: 100vw;
-  transform: translateX(-4rem);
+  transform: translateX(-5%);
 }
 .middle {
   background: #4fd2b3;

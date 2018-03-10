@@ -34,5 +34,6 @@ body {
 }
 .view {
   flex-grow: 1;
+  margin: 0 5%;
 }
 </style>
