@@ -46,3 +46,8 @@ export const getContracts = async (itemId) => {
   const response = await axios.get(`${apiHost}/api/dapps/${itemId}/contract`);
   return response.data.data;
 };
+
+export const getItem = async (itemId) => {
+  const response = await axios.get(`${apiHost}/api/dapps/${itemId}`);
+  return response.data.data;
+};
