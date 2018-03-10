@@ -1,0 +1,15 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - lts/*
+
+cache: yarn
+
+install:
+  - yarn install
+
+script:
+  - commitlint-travis
+  - yarn run lint
