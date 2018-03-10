@@ -7,6 +7,27 @@
       "signIn": "login"
     }
   },
+  "HomeView": {
+    "hero": {
+      "title": "DapDap Blockchain Game List",
+      "subtitle": "Blockchain game and player trading information platform"
+    },
+    "appList": {
+      "tabTitle": "Application leaderboard",
+      "index": "Rankings",
+      "title": "Application name",
+      "category": "category",
+      "balance": "Contract balance",
+      "volumeLastDay": "24-hour transaction amount(ETH)",
+      "volumeLastWeek": "7 days transaction amount(ETH)",
+      "txLastDay": "24 hours trading",
+      "txLastWeek": "7 days trading",
+      "dauLastDay": "Daily active users"
+    },
+    "userList": {
+      "tabTitle": "User Rankings"
+    }
+  },
   "ItemView": {
     "dAppSite": "Official website",
     "publishDate": "release time：",
@@ -34,7 +55,7 @@
         "title": "User Statistics",
         "winListTitle": "Make money list",
         "lossListTitle": "Lose money list",
-        "index": "Rank",
+        "index": "Rankings",
         "value": "ETH",
         "address": "Players",
         "message": "Evaluation"
