@@ -51,3 +51,12 @@ export const getItem = async (itemId) => {
   const response = await axios.get(`${apiHost}/api/dapps/${itemId}`);
   return response.data.data;
 };
+
+export const getUser = async address => ({
+  address,
+  balance: 22.12,
+  income: -11,
+  playedDApps: [
+    { id: 1, name: 'xxx', income: -9.22 },
+    { id: 2, name: 'yy', income: 10.22 }],
+});
