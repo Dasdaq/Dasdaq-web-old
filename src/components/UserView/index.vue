@@ -17,40 +17,38 @@
       </div>
     </div>
 
-    <section>
-      <b-tabs v-model="activeTab">
-        <b-tab-item :label="$t('UserView.tabs.playedDApps')">
-          <b-table class=""
-                   :data="playedDApps"
-                   default-sort-direction="asc"
-                   default-sort="income"
-                   :mobile-cards="false">
-            <template slot-scope="props">
-              <b-table-column :label="$t('UserView.playedDApps.index')"
-                              width="80">
-                {{ props.index+1 }}
-              </b-table-column>
-              <b-table-column field="name"
-                              :label="$t('UserView.playedDApps.name')">
-                <router-link class="navbar-item"
-                             :to="{ name: 'ItemView', params:{ id:props.row.id}}">
-                  {{ props.row.name }}</router-link>
-              </b-table-column>
-              <b-table-column field="income"
-                              :label="$t('UserView.playedDApps.income')"
-                              sortable>
-                {{ props.row.income }}
-              </b-table-column>
-            </template>
-          </b-table>
-        </b-tab-item>
+    <b-tabs v-model="activeTab">
+      <b-tab-item :label="$t('UserView.tabs.playedDApps.title')">
+        <b-table class=""
+                 :data="playedDApps"
+                 default-sort-direction="asc"
+                 default-sort="income"
+                 :mobile-cards="true">
+          <template slot-scope="props">
+            <b-table-column :label="$t('UserView.tabs.playedDApps.index')"
+                            width="80">
+              {{ props.index+1 }}
+            </b-table-column>
+            <b-table-column field="name"
+                            :label="$t('UserView.tabs.playedDApps.name')">
+              <router-link class="navbar-item"
+                           :to="{ name: 'ItemView', params:{ id:props.row.id}}">
+                {{ props.row.name }}</router-link>
+            </b-table-column>
+            <b-table-column field="income"
+                            :label="$t('UserView.tabs.playedDApps.income')"
+                            sortable>
+              {{ props.row.income }}
+            </b-table-column>
+          </template>
+        </b-table>
+      </b-tab-item>
 
-        <b-tab-item :label="$t('UserView.tabs.messageBoard')">
-          <Disqus :shortname="$config.disqus.shortname"
-                  :identifier="'user-'+address"></Disqus>
-        </b-tab-item>
-      </b-tabs>
-    </section>
+      <b-tab-item :label="$t('UserView.tabs.messageBoard.title')">
+        <Disqus :shortname="$config.disqus.shortname"
+                :identifier="'user-'+address"></Disqus>
+      </b-tab-item>
+    </b-tabs>
   </main>
 </template>
 
