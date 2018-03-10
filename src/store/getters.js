@@ -5,7 +5,7 @@
 // Like computed properties, a getter's result is cached based on its dependencies,
 // and will only re-evaluate when some of its dependencies have changed.
 
-import config from '@/config';
+import { i18n } from '@/config';
 
 export default {
   /* Examples:
@@ -24,7 +24,7 @@ export default {
   // this.$store.getters.getTodoById(2) // -> { id: 2, text: '...', done: false }
   */
   currentLangDisplay: (state) => {
-    const current = config.i18n.find(item => item.locale === state.locale);
+    const current = i18n.find(item => item.locale === state.locale);
     return current ? current.langDisplay : '';
   },
 };
