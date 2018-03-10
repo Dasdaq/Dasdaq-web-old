@@ -9,9 +9,7 @@ const messages = {};
 i18n.forEach((item) => {
   // eslint-disable-next-line
   const locale = require(`./locales/${item.locale}.json`);
-  item.aliases.forEach((alias) => {
-    messages[alias] = locale;
-  });
+  messages[item.locale] = locale;
 });
 
 export default new VueI18n({

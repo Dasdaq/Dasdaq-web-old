@@ -3,14 +3,10 @@ import Cookie from 'js-cookie';
 import axios from 'axios';
 import web3 from '@/web3';
 
-export const getLocale = () => (
-  Cookie.get('locale') ||
-  (
-    navigator.language ||
-    navigator.browserLanguage ||
-    navigator.userLanguage
-  ).toLowerCase()
-);
+export const getLocale = () => {
+  const locale = Cookie.get('locale') || (navigator.language || navigator.browserLanguage || navigator.userLanguage).toLowerCase();
+  return locale.split('-')[0];
+};
 
 export const setLocale = (locale) => {
   Cookie.set('locale', locale, { expires: 365 });
