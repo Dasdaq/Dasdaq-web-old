@@ -84,5 +84,12 @@ export const getUser = async (address) => {
 
 export const getPlayerRank = async () => {
   const response = await axios.get(`${apiHost}/api/dapps`);
-  return response.data.data;
+  const d = response.data.data;
+  d.forEach((v) => {
+    ['txLastWeek', 'balance', 'volumeLastDay', 'volumeLastWeek',
+      'txLastWeek', 'txLastDay', 'dauLastDay', 'balance'].forEach((key) => {
+      v[key] = Number(v[key]);
+    });
+  });
+  return d;
 };

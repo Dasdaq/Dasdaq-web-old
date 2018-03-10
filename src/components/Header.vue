@@ -23,7 +23,7 @@
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
-              <a class="button is-primary"
+              <a class="button is-success"
                  target="_blank"
                  :href="$config.submitDappLink">
                 {{$t('header.nav.submitApp')}}
