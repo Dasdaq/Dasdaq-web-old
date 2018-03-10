@@ -14,3 +14,4 @@ export const disqus = {
 };
 
 export const apiHost = 'http://10.30.4.57:5000';
+export const submitDappLink = 'https://baidu.com';
