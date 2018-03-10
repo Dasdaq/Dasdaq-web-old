@@ -14,7 +14,7 @@
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.player')">
-          Player
+          <PlayerStatistics :itemId="id" />
         </b-tab-item>
 
         <b-tab-item :label="$t('itemView.tabs.contract')">
@@ -29,6 +29,7 @@
 <script>
 import Disqus from 'vue-disqus/VueDisqus';
 import TransactionStatistics from '@/components/TransactionStatistics';
+import PlayerStatistics from '@/components/PlayerStatistics';
 
 export default {
   name: 'ItemView',
@@ -36,6 +37,7 @@ export default {
   components: {
     Disqus,
     TransactionStatistics,
+    PlayerStatistics,
   },
 
   data() {
