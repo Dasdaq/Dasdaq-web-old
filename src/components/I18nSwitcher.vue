@@ -1,11 +1,20 @@
 <template>
-  <select class="I18nSwitcher"
-          v-model="locale">
-    <option v-for="(item) in $config.i18n"
-            :key="item.locale"
-            :value="item.locale">
-      {{item.langDisplay}}</option>
-  </select>
+  <div class="I18nSwitcher">
+    <p class="control has-icons-left">
+      <span class="select">
+        <select v-model="locale">
+          <option v-for="(item) in $config.i18n"
+                  :key="item.locale"
+                  :value="item.locale">
+            {{item.langDisplay}}</option>
+        </select>
+      </span>
+      <span class="icon is-left">
+        <i class="mdi mdi-earth"></i>
+      </span>
+    </p>
+  </div>
+
 </template>
 
 <script>
