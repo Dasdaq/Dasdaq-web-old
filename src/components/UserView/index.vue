@@ -1,6 +1,6 @@
 <template>
   <main class="UserView">
-    <div class="columns box">
+    <div class="columns user-profile box">
       <div class="column is-one-quarter">
         <figure class="user-avatar image is-128x128">
           <img src="../../assets/avatar.png">
@@ -17,7 +17,8 @@
       </div>
     </div>
 
-    <b-tabs v-model="activeTab">
+    <b-tabs class="box"
+            v-model="activeTab">
       <b-tab-item :label="$t('UserView.tabs.playedDApps.title')">
         <b-table class=""
                  :data="playedDApps"
@@ -91,8 +92,13 @@ export default {
 
 <style scoped>
 .UserView {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
+.user-profile {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .user-avatar {
   margin: auto;
 }
