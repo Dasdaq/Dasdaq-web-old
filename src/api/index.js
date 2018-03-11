@@ -66,7 +66,17 @@ export const getItem = async (itemId) => {
     });
   });
 
-  return response.data.data;
+  ['totalVolume', 'totalGasCost'].forEach((key) => {
+    // eslint-disable-next-line no-param-reassign
+    d[key] = Number(web3.fromWei(d[key], 'ether')).toFixed(2);
+  });
+
+  ['balance', 'volumeLastWeek', 'volumeLastDay'].forEach((key) => {
+    // eslint-disable-next-line no-param-reassign
+    d[key] = Number(d[key]).toFixed(2);
+  });
+
+  return d;
 };
 
 export const getUser = async (address) => {
@@ -89,11 +99,16 @@ export const getPlayerRank = async () => {
   const d = response.data.data;
 
   d.forEach((v) => {
-    ['txLastWeek', 'balance', 'volumeLastDay', 'volumeLastWeek',
-      'txLastWeek', 'txLastDay', 'dauLastDay', 'balance'].forEach((key) => {
+    ['totalVolume', 'totalGasCost'].forEach((key) => {
       // eslint-disable-next-line no-param-reassign
-      v[key] = Number(v[key]);
+      v[key] = Number(web3.fromWei(v[key], 'ether')).toFixed(2);
+    });
+
+    ['balance', 'volumeLastWeek', 'volumeLastDay'].forEach((key) => {
+      // eslint-disable-next-line no-param-reassign
+      v[key] = Number(v[key]).toFixed(2);
     });
   });
+
   return d;
 };
