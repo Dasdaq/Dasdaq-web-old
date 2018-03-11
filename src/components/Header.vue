@@ -1,21 +1,41 @@
 <template>
   <header class="Header">
-    <nav class="navbar">
+    <nav :class="['navbar',$route.name === 'HomeView' ? 'is-primary' : '']">
       <div class="navbar-brand">
         <router-link class="navbar-item"
                      :to="{ name: 'HomeView'}">
-          <img src="../assets/logo.png"
+          <img v-if="$route.name === 'HomeView'"
+               src="../assets/logo.png"
+               :alt="$t('header.nav.siteName')" />
+          <img v-else
+               src="../assets/heroLogo.png"
                :alt="$t('header.nav.siteName')" />
         </router-link>
+
+        <router-link class="navbar-item "
+                     :to="{ name: 'ExploreView'}">
+          <span class="icon">
+            <i class="mdi mdi-compass"></i>
+          </span>
+          <span>{{$t('header.nav.explore')}}</span>
+        </router-link>
+
         <router-link v-if="me"
                      class="navbar-item"
                      :to="{ name: 'UserView', params:{address: me.address}}">
-          <img src="../assets/avatar.png" /> &nbsp;&nbsp;{{$t('header.nav.myPage')}}
+          <span class="icon">
+            <i class="mdi mdi-account-circle"></i>
+          </span>
+          <span>{{$t('header.nav.myPage')}}</span>
+
         </router-link>
         <a v-else
            class="navbar-item"
            @click="onSignIn">
-          <img src="../assets/avatar.png" /> &nbsp;&nbsp;{{$t('header.nav.signIn')}}
+          <span class="icon">
+            <i class="mdi mdi-account-circle"></i>
+          </span>
+          <span>{{$t('header.nav.signIn')}}</span>
         </a>
       </div>
 
@@ -23,10 +43,15 @@
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
-              <a class="button is-success"
+              <a class="button is-primary"
                  target="_blank"
                  :href="$config.submitDappLink">
-                {{$t('header.nav.submitApp')}}
+                <span class="icon is-left">
+                  <i class="mdi mdi-plus-circle"></i>
+                </span>
+                <span>
+                  {{$t('header.nav.submitApp')}}
+                </span>
               </a>
             </p>
             <div class="control">
@@ -75,5 +100,8 @@ export default {
 </script>
 
 <style scoped>
-
+.navbar.is-primary {
+  box-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 </style>
