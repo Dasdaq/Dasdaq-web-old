@@ -3,14 +3,16 @@
     "nav": {
       "siteName": "DapDap",
       "myPage": "Profile",
-      "submitApp": "Submit Dapp",
-      "signIn": "login"
+      "submitApp": "Submit DApp",
+      "signIn": "Sign In",
+      "explore": "Explore"
     }
   },
   "HomeView": {
     "hero": {
       "title": "DapDap Blockchain Game List",
-      "subtitle": "Blockchain game and player trading information platform"
+      "subtitle": "Blockchain game and player trading information platform",
+      "explore": "Explore"
     },
     "appList": {
       "tabTitle": "Application leaderboard",

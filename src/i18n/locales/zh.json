@@ -4,13 +4,15 @@
       "siteName": "DapDap",
       "myPage": "我的",
       "submitApp": "提交Dapp",
-      "signIn": "登录"
+      "signIn": "登录",
+      "explore":"发现"
     }
   },
   "HomeView": {
     "hero": {
-      "title": "DapDap区块链游戏榜",
-      "subtitle": "区块链游戏及玩家交易信息平台"
+      "title": "区块链应用评价平台",
+      "subtitle": "区块链游戏及玩家交易信息平台",
+      "explore": "发现应用"
     },
     "appList": {
       "tabTitle": "应用排行榜",
