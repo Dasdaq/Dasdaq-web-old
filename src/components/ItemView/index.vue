@@ -131,6 +131,9 @@ export default {
 </script>
 
 <style scoped>
+.ItemView {
+  margin-top: 0;
+}
 .hero {
   width: 100vw;
   transform: translateX(-5%);
