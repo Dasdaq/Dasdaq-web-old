@@ -26,6 +26,7 @@ export default {
 html,
 body {
   height: 100%;
+  background: #F1F1F1;
 }
 #app {
   min-height: 100%;
@@ -34,6 +35,6 @@ body {
 }
 .view {
   flex-grow: 1;
-  margin: 0 5%;
+  margin: 3% 5% 0% 5%;
 }
 </style>
