@@ -7,7 +7,7 @@
         <b-table-column field="index"
                         :label="$t('ItemView.tabs.player.index')"
                         width="60">
-          {{ props.row.index }}
+          {{ props.index+1 }}
         </b-table-column>
         <b-table-column field="address"
                         :label="$t('ItemView.tabs.player.address')"
