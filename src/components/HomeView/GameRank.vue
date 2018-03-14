@@ -17,7 +17,12 @@
         <b-table-column field="category"
                         :label="$t('HomeView.appList.category')"
                         sortable>
-          {{ props.row.category }}
+          {{ props.row.category.toUpperCase() }}
+        </b-table-column>
+        <b-table-column field="createdAt"
+                        :label="$t('HomeView.appList.createdAt')"
+                        sortable>
+          {{ (new Date(props.row.createdAt)).toLocaleDateString() }}
         </b-table-column>
         <b-table-column v-for="key in
         ['balance','dauLastDay','volumeLastDay','volumeLastWeek','txLastDay','txLastWeek']"

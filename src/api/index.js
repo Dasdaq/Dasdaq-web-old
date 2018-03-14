@@ -100,6 +100,8 @@ export const getAppsRanking = async () => {
   const d = response.data.data;
 
   d.forEach((v) => {
+    // eslint-disable-next-line no-param-reassign
+    v.createdAt = (new Date(v.createdAt)).getTime();
     ['totalVolume', 'totalGasCost'].forEach((key) => {
       // eslint-disable-next-line no-param-reassign
       v[key] = _.round(web3.fromWei(v[key], 'ether'), 2);
