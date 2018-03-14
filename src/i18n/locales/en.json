@@ -16,8 +16,8 @@
   },
   "HomeView": {
     "hero": {
-      "title": "DapDap Blockchain Game List",
-      "subtitle": "Blockchain game and player trading information platform",
+      "title": "DapDap",
+      "subtitle": "Explore most popular decentralized ethereum applications (Dapps)",
       "explore": "Explore"
     },
     "appList": {

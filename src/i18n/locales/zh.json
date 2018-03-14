@@ -16,9 +16,9 @@
   },
   "HomeView": {
     "hero": {
-      "title": "区块链应用评价平台",
-      "subtitle": "区块链游戏及玩家交易信息平台",
-      "explore": "发现应用"
+      "title": "DapDap",
+      "subtitle": "发现时下最流行的去中心化应用（Dapps）",
+      "explore": "发现"
     },
     "appList": {
       "tabTitle": "应用排行榜",
