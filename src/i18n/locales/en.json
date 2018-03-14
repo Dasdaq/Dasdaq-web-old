@@ -11,6 +11,9 @@
       "explore": "Explore"
     }
   },
+  "footer": {
+    "contact":"Contact us"
+  },
   "HomeView": {
     "hero": {
       "title": "DapDap Blockchain Game List",

@@ -11,6 +11,9 @@
       "explore":"发现"
     }
   },
+  "footer": {
+    "contact":"联系我们"
+  },
   "HomeView": {
     "hero": {
       "title": "区块链应用评价平台",
