@@ -13,7 +13,7 @@ export const disqus = {
   shortname: 'dapdap',
 };
 
-export const apiHost = 'http://10.30.4.57:5000';
+export const apiHost = 'http://api.dapdap.io';
 export const submitDappLink = 'https://baidu.com';
 
 export const network = {
