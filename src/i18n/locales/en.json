@@ -18,20 +18,20 @@
       "explore": "Explore"
     },
     "appList": {
-      "tabTitle": "Application leaderboard",
-      "index": "Rankings",
-      "title": "Application name",
-      "category": "category",
+      "tabTitle": "DApp Ranking",
+      "index": "#",
+      "title": "Title",
+      "category": "Category",
       "createdAt": "Publish",
-      "balance": "Contract balance",
-      "volumeLastDay": "24-hour transaction amount(ETH)",
-      "volumeLastWeek": "7 days transaction amount(ETH)",
-      "txLastDay": "24 hours trading",
-      "txLastWeek": "7 days trading",
-      "dauLastDay": "Daily active users"
+      "balance": "Balance",
+      "volumeLastDay": "Volume 24h (ETH)",
+      "volumeLastWeek": "Volume 7d (ETH)",
+      "txLastDay": "Tx 24h",
+      "txLastWeek": "Tx 7d",
+      "dauLastDay": "DAU"
     },
     "userList": {
-      "tabTitle": "User Rankings"
+      "tabTitle": "User Ranking"
     }
   },
   "ItemView": {
@@ -42,13 +42,13 @@
       "transaction": {
         "title": "Transaction statistics",
         "overviewTitle": "Overview",
-        "balance": "Contract balance",
-        "volumeLastDay": "24-hour transaction amount(ETH)",
-        "volumeLastWeek": "7 days transaction amount(ETH)",
-        "txLastDay": "24 hours trading",
-        "txLastWeek": "7 days trading",
-        "dauLastDay": "Daily active users",
-        "chartTitle": "History details",
+        "balance": "Balance",
+        "volumeLastDay": "Volume 24h (ETH)",
+        "volumeLastWeek": "Volume 7d (ETH)",
+        "txLastDay": "Tx 24h",
+        "txLastWeek": "Tx 7d",
+        "dauLastDay": "DAU",
+        "chartTitle": "Details",
         "plays": "Users",
         "totalVolume": "Total transaction amount(ETH)",
         "transactionsCount": "Number of transactions",
