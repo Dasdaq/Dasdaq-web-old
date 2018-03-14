@@ -16,7 +16,7 @@
 <script>
 import GameRank from '@/components/HomeView/GameRank';
 import PlayerRank from '@/components/HomeView/PlayerRank';
-import { getPlayerRank } from '@/api';
+import { getAppsRanking } from '@/api';
 
 export default {
   name: 'ExploreView',
@@ -36,7 +36,7 @@ export default {
   computed: {},
 
   async created() {
-    this.item = await getPlayerRank();
+    this.item = await getAppsRanking();
   },
 
   methods: {},
