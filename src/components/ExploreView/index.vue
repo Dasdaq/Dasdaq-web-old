@@ -6,9 +6,9 @@
         <GameRank :item="item"></GameRank>
       </b-tab-item>
 
-      <b-tab-item :label="$t('HomeView.userList.tabTitle')">
+      <!-- <b-tab-item :label="$t('HomeView.userList.tabTitle')">
         <PlayerRank></PlayerRank>
-      </b-tab-item>
+      </b-tab-item> -->
     </b-tabs>
   </main>
 </template>
