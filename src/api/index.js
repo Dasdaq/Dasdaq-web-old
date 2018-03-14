@@ -1,5 +1,6 @@
 import Promise from 'bluebird';
 import Cookie from 'js-cookie';
+import _ from 'lodash';
 import axios from 'axios';
 import web3 from '@/web3';
 import { apiHost } from '@/config';
@@ -39,7 +40,7 @@ export const getPlayers = async (itemId) => {
   ['win', 'loss'].forEach((key) => {
     data[key].forEach((v) => {
       // eslint-disable-next-line no-param-reassign
-      v.value = Number(web3.fromWei(v.value, 'ether')).toFixed(2);
+      v.value = _.round(web3.fromWei(v.value, 'ether'), 2);
     });
   });
   return {
@@ -61,19 +62,19 @@ export const getItem = async (itemId) => {
     d[k1].forEach((v) => {
       ['totalGasCost', 'totalVolume'].forEach((k2) => {
         // eslint-disable-next-line no-param-reassign
-        v[k2] = Number(web3.fromWei(v[k2], 'ether')).toFixed(2);
+        v[k2] = _.round(web3.fromWei(v[k2], 'ether'), 2);
       });
     });
   });
 
   ['totalVolume', 'totalGasCost'].forEach((key) => {
     // eslint-disable-next-line no-param-reassign
-    d[key] = Number(web3.fromWei(d[key], 'ether')).toFixed(2);
+    d[key] = _.round(web3.fromWei(d[key], 'ether'), 2);
   });
 
   ['balance', 'volumeLastWeek', 'volumeLastDay'].forEach((key) => {
     // eslint-disable-next-line no-param-reassign
-    d[key] = Number(d[key]).toFixed(2);
+    d[key] = _.round(d[key], 2);
   });
 
   return d;
@@ -85,10 +86,10 @@ export const getUser = async (address) => {
   return {
     address,
     balance: d.balance,
-    income: Number(web3.fromWei(d.total, 'ether')).toFixed(5),
+    income: _.round(web3.fromWei(d.total, 'ether'), 5),
     playedDApps: d.data.map(v => ({
       id: v.id,
-      income: Number(web3.fromWei(v.value, 'ether')).toFixed(5),
+      income: _.round(web3.fromWei(v.value, 'ether'), 5),
       name: v.name,
     })),
   };
@@ -101,12 +102,12 @@ export const getPlayerRank = async () => {
   d.forEach((v) => {
     ['totalVolume', 'totalGasCost'].forEach((key) => {
       // eslint-disable-next-line no-param-reassign
-      v[key] = Number(web3.fromWei(v[key], 'ether')).toFixed(2);
+      v[key] = _.round(web3.fromWei(v[key], 'ether'), 2);
     });
 
     ['balance', 'volumeLastWeek', 'volumeLastDay'].forEach((key) => {
       // eslint-disable-next-line no-param-reassign
-      v[key] = Number(v[key]).toFixed(2);
+      v[key] = _.round(v[key], 2);
     });
   });
 
