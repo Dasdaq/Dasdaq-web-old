@@ -57,3 +57,8 @@ export default {
   watch: {},
 };
 </script>
+<style scoped>
+.GameRank{
+  font-size: 14px;
+}
+</style>
