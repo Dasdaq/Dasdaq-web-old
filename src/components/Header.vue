@@ -10,6 +10,7 @@
           <img v-else
                src="../assets/heroLogo.png"
                :alt="$t('header.nav.siteName')" />
+               <span class="tag">Beta</span>
         </router-link>
 
         <router-link class="navbar-item "
