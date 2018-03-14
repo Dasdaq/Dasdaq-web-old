@@ -33,7 +33,7 @@ export const getMe = async () => {
 };
 
 export const getPlayers = async (itemId) => {
-  const response = await axios.get(`${apiHost}/api/dapps/${itemId}/top`);
+  const response = await axios.get(`${apiHost}/dapps/${itemId}/top`);
   const data = response.data.data;
   // format
   ['win', 'loss'].forEach((key) => {
@@ -49,12 +49,12 @@ export const getPlayers = async (itemId) => {
 };
 
 export const getContracts = async (itemId) => {
-  const response = await axios.get(`${apiHost}/api/dapps/${itemId}/contract`);
+  const response = await axios.get(`${apiHost}/dapps/${itemId}/contract`);
   return response.data.data;
 };
 
 export const getItem = async (itemId) => {
-  const response = await axios.get(`${apiHost}/api/dapps/${itemId}`);
+  const response = await axios.get(`${apiHost}/dapps/${itemId}`);
   // format
   const d = response.data.data;
   ['h1', 'd1', 'd7'].forEach((k1) => {
@@ -80,7 +80,7 @@ export const getItem = async (itemId) => {
 };
 
 export const getUser = async (address) => {
-  const response = await axios.get(`${apiHost}/api/user/${address.toLowerCase()}`);
+  const response = await axios.get(`${apiHost}/user/${address.toLowerCase()}`);
   const d = response.data;
   return {
     address,
@@ -95,7 +95,7 @@ export const getUser = async (address) => {
 };
 
 export const getPlayerRank = async () => {
-  const response = await axios.get(`${apiHost}/api/dapps`);
+  const response = await axios.get(`${apiHost}/dapps`);
   const d = response.data.data;
 
   d.forEach((v) => {
