@@ -1,4 +1,7 @@
 {
+  "config": {
+    "submitAppUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd1pc50EqQ5S7A7OxBBCcciloQWjpEcCJ9Uii_E4iUxrlI7dg/viewform"
+  },
   "header": {
     "nav": {
       "siteName": "DapDap",

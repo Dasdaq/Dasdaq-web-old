@@ -46,7 +46,7 @@
             <p class="control">
               <a class="button is-primary"
                  target="_blank"
-                 :href="$config.submitDappLink">
+                 :href="$t('config.submitAppUrl')">
                 <span class="icon is-left">
                   <i class="mdi mdi-plus-circle"></i>
                 </span>
