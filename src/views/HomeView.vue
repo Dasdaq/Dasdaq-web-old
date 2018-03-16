@@ -15,7 +15,7 @@
           </h2>
 
           <router-link :to="{ name: 'ExploreView'}"
-                       class="animated bounceInUp is-outlined is-white button is-medium">
+                       class="animated fadeIn is-outlined is-white button is-medium">
             {{$t('HomeView.hero.explore')}}
           </router-link>
         </div>
