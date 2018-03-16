@@ -12,7 +12,7 @@
     }
   },
   "footer": {
-    "contact":"Contact us"
+    "contact": "Contact us"
   },
   "HomeView": {
     "hero": {
@@ -26,7 +26,7 @@
       "title": "Title",
       "category": "Category",
       "createdAt": "Publish",
-      "balance": "Balance",
+      "balance": "Balance(ETH)",
       "volumeLastDay": "Volume 24h (ETH)",
       "volumeLastWeek": "Volume 7d (ETH)",
       "txLastDay": "Tx 24h",
@@ -45,7 +45,7 @@
       "transaction": {
         "title": "Transaction statistics",
         "overviewTitle": "Overview",
-        "balance": "Balance",
+        "balance": "Balance(ETH)",
         "volumeLastDay": "Volume 24h (ETH)",
         "volumeLastWeek": "Volume 7d (ETH)",
         "txLastDay": "Tx 24h",
