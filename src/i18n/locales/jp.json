@@ -1,0 +1,100 @@
+{
+  "config": {
+    "submitAppUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd1pc50EqQ5S7A7OxBBCcciloQWjpEcCJ9Uii_E4iUxrlI7dg/viewform"
+  },
+  "header": {
+    "nav": {
+      "siteName": "DapDap",
+      "myPage": "プロフィール",
+      "submitApp": "Submit DApp",
+      "signIn": "サインイン",
+      "explore": "もっと知る"
+    }
+  },
+  "footer": {
+    "contact": "連絡先"
+  },
+  "HomeView": {
+    "hero": {
+      "title": "DapDap",
+      "subtitle": "分散型台帳技術を使ったイーサリウムアプリケーション（DapDap）についてもっと知る",
+      "explore": "もっと知る"
+    },
+    "appList": {
+      "tabTitle": "デイリーアプリランキング",
+      "index": "#",
+      "title": "タイトル",
+      "category": "カテゴリー",
+      "createdAt": "公開日",
+      "balance": "残高(ETH)",
+      "volumeLastDay": "ボリューム 24時間 (ETH)",
+      "volumeLastWeek": "ボリューム 7日 (ETH)",
+      "txLastDay": "Tx 24時間",
+      "txLastWeek": "Tx 7日",
+      "dauLastDay": "DAU"
+    },
+    "userList": {
+      "tabTitle": "ユーザーランキング"
+    }
+  },
+  "ItemView": {
+    "dAppSite": "公式ウェブサイト",
+    "publishDate": "リリース日：",
+    "contact": "連絡先：",
+    "tabs": {
+      "transaction": {
+        "title": "トランザクション統計",
+        "overviewTitle": "オーバービュー",
+        "balance": "残高(ETH)",
+        "volumeLastDay": "ボリューム 24時間 (ETH)",
+        "volumeLastWeek": "ボリューム 7日 (ETH)",
+        "txLastDay": "Tx 24時間",
+        "txLastWeek": "Tx 7日",
+        "dauLastDay": "DAU",
+        "chartTitle": "詳細",
+        "plays": "ユーザー",
+        "totalVolume": "総トランザクション額(ETH)",
+        "transactionsCount": "トランザクション数",
+        "totalGasCost": "Gas消費量(ETH)",
+        "h1": "1時間",
+        "d1": "1日",
+        "d7": "1週間"
+      },
+      "player": {
+        "title": "ユーザー統計",
+        "winListTitle": "利益額",
+        "lossListTitle": "損失額",
+        "index": "ランキング",
+        "value": "ETH",
+        "address": "プレイヤー",
+        "message": "評価"
+      },
+      "contract": {
+        "title": "契約",
+        "index": "No.",
+        "address": "契約アドレス"
+      },
+      "comment": "discuss"
+    }
+  },
+  "UserView": {
+    "address": "アカウントアドレス",
+    "balance": "アカウント収支",
+    "income": "DAppトータルレベニュー",
+    "tabs": {
+      "playedDApps": {
+        "title": "プレイされたDApps",
+        "index": "No.",
+        "name": "DApp",
+        "income": "収入(ETH)"
+      },
+      "messageBoard": {
+        "title": "メッセージ"
+      }
+    }
+  },
+  "Error": {
+    "METAMASK_LOCKED": "メタマスクをアンロックしてください",
+    "NO_METAMASK": "メタマスクプラグインのインストールにはGoogle ChromeかFirefoxが必要です。"
+  }
+}
