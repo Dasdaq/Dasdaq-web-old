@@ -14,6 +14,9 @@ npm run dev
 # build for production with minification
 npm run build
 
+# push to gh-pages
+npm run deploy
+
 # build for production and view the bundle analyzer report
 npm run build --report
 
