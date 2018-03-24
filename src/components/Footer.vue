@@ -21,7 +21,6 @@
         <a href="https://jq.qq.com/?_wv=1027&k=5e9frrq" class="icon">
           <img src="/static/images/header/qq.png" alt="qq" /></a>
       </div>
-      
     </div>
   </footer>
 </template>
@@ -44,9 +43,7 @@ export default {
 
   watch: {},
 
-  shareout(){
-
-  }
+  shareout() {},
 };
 </script>
 

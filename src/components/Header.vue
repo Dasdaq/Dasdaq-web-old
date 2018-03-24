@@ -12,7 +12,6 @@
                :alt="$t('header.nav.siteName')" />
                <span class="tag">Beta</span>
         </router-link>
-        
         <router-link class="navbar-item "
                      :to="{ name: 'ExploreView'}">
           <span class="icon">
@@ -38,7 +37,6 @@
           </span>
           <span>{{$t('header.nav.signIn')}}</span>
         </a>
-        
         <router-link class="navbar-item "
                      :to="{ name: 'HeadLineView'}">
           <span class="icon">
