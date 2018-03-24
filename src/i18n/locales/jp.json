@@ -12,7 +12,11 @@
     }
   },
   "footer": {
-    "contact": "連絡先"
+    "contact": "連絡先",
+    "blogroll": "友情リンク"
+  },
+  "blogroll": {
+    "luckyeth": "luckyeth.io"
   },
   "HomeView": {
     "hero": {

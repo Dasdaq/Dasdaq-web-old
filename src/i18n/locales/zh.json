@@ -12,7 +12,11 @@
     }
   },
   "footer": {
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "blogroll": "友情链接"
+  },
+  "blogroll": {
+    "luckyeth": "luckyeth.io"
   },
   "HomeView": {
     "hero": {

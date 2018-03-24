@@ -12,7 +12,11 @@
     }
   },
   "footer": {
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "blogroll": "Blogroll"
+  },
+  "blogroll": {
+    "luckyeth": "luckyeth.io"
   },
   "HomeView": {
     "hero": {
