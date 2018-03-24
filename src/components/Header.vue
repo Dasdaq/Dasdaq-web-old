@@ -12,14 +12,6 @@
                :alt="$t('header.nav.siteName')" />
                <span class="tag">Beta</span>
         </router-link>
-
-        <router-link class="navbar-item "
-                     :to="{ name: 'HeadLineView'}">
-          <span class="icon">
-            <i class="mdi mdi-compass"></i>
-          </span>
-          <span>{{$t('header.nav.headLine')}}</span>
-        </router-link>
         
         <router-link class="navbar-item "
                      :to="{ name: 'ExploreView'}">
@@ -46,6 +38,14 @@
           </span>
           <span>{{$t('header.nav.signIn')}}</span>
         </a>
+        
+        <router-link class="navbar-item "
+                     :to="{ name: 'HeadLineView'}">
+          <span class="icon">
+            <i class="mdi mdi-compass"></i>
+          </span>
+          <span>{{$t('header.nav.headLine')}}</span>
+        </router-link>
       </div>
 
       <div class="navbar-end">
