@@ -3,9 +3,9 @@
     <div class="columns">
       <div class="has-text-left column">
         {{$t('footer.blogroll')}}
-        <a href="http://luckyeth.io" class="icon" style="vertical-align:middle">
-          <img src="/static/images/header/luckyeth.png" alt="luckyeth" /></a>
-        <a href="http://luckyeth.io" >{{$t('blogroll.luckyeth')}}</a>
+        <a href="http://goyougame.com/" class="icon" style="vertical-align:middle">
+          <img src="/static/images/header/goyougame.png" alt="goyougame" /></a>
+        <a href="http://goyougame.com/" target="_blank">{{$t('blogroll.goyougame')}}</a>
       </div>
       <div class="content has-text-centered column">
         <p>
