@@ -8,7 +8,8 @@
       "myPage": "Profile",
       "submitApp": "Submit DApp",
       "signIn": "Sign In",
-      "explore": "Explore"
+      "explore": "Explore",
+      "headLine": "headLine"
     }
   },
   "footer": {
