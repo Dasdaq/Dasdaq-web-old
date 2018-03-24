@@ -7,6 +7,10 @@ export const i18n = [{
   default: true,
   langDisplay: 'English',
   locale: 'en',
+}, {
+  default: true,
+  langDisplay: 'Japanese',
+  locale: 'jp',
 }];
 
 export const disqus = {
