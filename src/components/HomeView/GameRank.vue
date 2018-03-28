@@ -1,7 +1,8 @@
 <template>
   <div class="GameRank">
     <div>
-      <a href="www.cryptosanguo.pro" target="_blank"> {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}} </a>
+      <a href="www.cryptosanguo.pro" target="_blank">
+        {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}} </a>
     </div>
 
     <b-table :data="item"
@@ -44,10 +45,6 @@
         </b-table-column>
       </template>
     </b-table>
-
-
-
-
   </div>
 </template>
 

@@ -8,7 +8,7 @@
 
       <b-tab-item :label="$t('HomeView.userList.tabTitle')">
         <PlayerRank :item="pitem"></PlayerRank>
-      </b-tab-item> 
+      </b-tab-item>
     </b-tabs>
   </main>
 </template>
@@ -31,7 +31,7 @@ export default {
     return {
       activeTab: 0,
       item: [],
-      pitem: [],
+      pitem: []
     };
   },
 
@@ -44,7 +44,7 @@ export default {
 
   methods: {},
 
-  watch: {},
+  watch: {}
 };
 </script>
 
