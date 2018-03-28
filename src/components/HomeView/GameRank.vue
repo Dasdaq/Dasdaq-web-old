@@ -1,7 +1,8 @@
 <template>
   <div class="GameRank">
     <b-table :data="item"
-             :mobile-cards="true">
+             :mobile-cards="true"
+             default-sort-direction="desc">
       <template slot-scope="props">
         <b-table-column :label="$t('HomeView.appList.index')">
           {{ props.index + 1 }}
