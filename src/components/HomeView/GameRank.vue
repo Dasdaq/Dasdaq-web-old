@@ -8,7 +8,8 @@
           {{ props.index + 1 }}
         </b-table-column>
         <b-table-column field="title"
-                        :label="$t('HomeView.appList.title')">
+                        :label="$t('HomeView.appList.title')"
+                        sortable>
           <router-link :to="{
                   name: 'ItemView',
                   params:{id: props.row.id}}">
