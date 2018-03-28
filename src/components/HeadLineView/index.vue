@@ -2,13 +2,13 @@
   <main class="HeadLineView">
     <b-tabs class="box"
             v-model="activeTab">
-      <b-tab-item :label="xpp">
+      <b-tab-item :label="$t('HomeView.appList.tabTitle')">
         <GameRank :item="item"></GameRank>
       </b-tab-item>
 
-      <b-tab-item :label="$t('HomeView.userList.tabTitle')">
-        <PlayerRank></PlayerRank>
-      </b-tab-item> 
+      <!--<b-tab-item :label="$t('HomeView.userList.tabTitle')">-->
+        <!--<PlayerRank></PlayerRank>-->
+      <!--</b-tab-item> -->
     </b-tabs>
   </main>
 </template>

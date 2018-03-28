@@ -1,7 +1,7 @@
 <template>
   <div class="GameRank">
     <div>
-      <a href="www.cryptosanguo.pro" target="_blank">
+      <a href="http://www.cryptosanguo.pro" target="_blank">
         {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}} </a>
     </div>
 

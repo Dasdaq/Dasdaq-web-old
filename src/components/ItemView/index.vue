@@ -67,13 +67,11 @@
     </section>
     <br/>
 
-
     <div>
-      <a class="item-ad-title" href="www.cryptosanguo.pro" target="_blank">
+      <a class="item-ad-title" href="http://www.cryptosanguo.pro" target="_blank">
         * {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}}
       </a>
     </div>
-
 
     <b-tabs v-model="activeTab">
       <b-tab-item :label="$t('ItemView.tabs.transaction.title')">
