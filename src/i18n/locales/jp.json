@@ -38,6 +38,10 @@
       "txLastWeek": "Tx 7日",
       "dauLastDay": "DAU"
     },
+    "adList": {
+      "sanguo": "三国志",
+      "sanguo-slogan": "決して戦いをあきらめる"
+    },
     "userList": {
       "tabTitle": "ユーザーランキング"
     }

@@ -38,6 +38,10 @@
       "txLastWeek": "7天交易笔数",
       "dauLastDay": "日活跃用户数"
     },
+    "adList": {
+      "sanguo": "三国",
+      "sanguo-slogan": "战斗, 永不放弃!"
+    },
     "userList": {
       "tabTitle": "用户排行榜"
     }

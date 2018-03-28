@@ -112,6 +112,5 @@ export const getAppsRanking = async () => {
       v[key] = _.round(v[key], 2);
     });
   });
-
   return d;
 };

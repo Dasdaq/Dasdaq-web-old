@@ -1,12 +1,14 @@
 <template>
-    <b-table :data="data" :columns="columns"></b-table>
+  <div class="PlayerRank">
+    <b-table :data="pitem" :columns="columns"></b-table>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'GameRank',
   components: {},
-
+  props: ['pitem'],
   data() {
     return {
       data: [

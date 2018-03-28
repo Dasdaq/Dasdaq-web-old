@@ -38,6 +38,10 @@
       "txLastWeek": "Tx 7d",
       "dauLastDay": "DAU"
     },
+    "adList": {
+      "sanguo": "Three Kindom",
+      "sanguo-slogan": "The War, we never give up!"
+    },
     "userList": {
       "tabTitle": "User Ranking"
     }

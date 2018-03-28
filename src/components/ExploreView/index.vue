@@ -6,9 +6,9 @@
         <GameRank :item="item"></GameRank>
       </b-tab-item>
 
-      <!-- <b-tab-item :label="$t('HomeView.userList.tabTitle')">
-        <PlayerRank></PlayerRank>
-      </b-tab-item> -->
+      <b-tab-item :label="$t('HomeView.userList.tabTitle')">
+        <PlayerRank :item="pitem"></PlayerRank>
+      </b-tab-item> 
     </b-tabs>
   </main>
 </template>
@@ -17,6 +17,7 @@
 import GameRank from '@/components/HomeView/GameRank';
 import PlayerRank from '@/components/HomeView/PlayerRank';
 import { getAppsRanking } from '@/api';
+import { getUser } from '@/api';
 
 export default {
   name: 'ExploreView',
@@ -30,6 +31,7 @@ export default {
     return {
       activeTab: 0,
       item: [],
+      pitem: [],
     };
   },
 
@@ -37,6 +39,7 @@ export default {
 
   async created() {
     this.item = await getAppsRanking();
+    this.pitem = await getUser();
   },
 
   methods: {},
