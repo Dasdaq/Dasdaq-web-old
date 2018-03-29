@@ -68,7 +68,7 @@
     <br/>
 
     <div>
-      <a class="item-ad-title" href="http://www.cryptosanguo.pro" target="_blank">
+      <a class="item-ad-title" href="http://luckyone.io" target="_blank">
         * {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}}
       </a>
     </div>
