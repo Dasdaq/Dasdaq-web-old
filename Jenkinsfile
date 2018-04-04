@@ -6,7 +6,7 @@ node {
   def APP_NAME = 'dapdap-web'
   def IMAGE_TAG = "gcr.io/${GCP_PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
   def NAMESPACE;
-  
+
   stage('Init parameters') {
     if (env.BRANCH_NAME == 'master') {
       NAMESPACE = 'default' // It's production
@@ -23,36 +23,38 @@ node {
   }
 
   stage('NPM run build') {
-    docker.image('node:carbon').inside { 
+    docker.image('node:carbon').inside {
         sh 'npm install'
         sh 'npm run build'
     }
   }
-  
+
   stage('Build image') {
     docker.build("${IMAGE_TAG}")
   }
 
   stage('Sign in GCP') {
     withCredentials([file(credentialsId: "${GCP_SERVICE_ACCOUNT_CREDENTIALID}", variable: 'KEY_FILE')]) {
-      sh "gcloud auth activate-service-account --key-file=$KEY_FILE"
-      sh "gcloud container clusters get-credentials ${GCP_CLUSTER} --zone ${GCP_ZONE} --project ${GCP_PROJECT}"
+        docker.image('google/cloud-sdk:latest').inside {
+            sh "gcloud auth activate-service-account --key-file=$KEY_FILE"
+            sh "gcloud container clusters get-credentials ${GCP_CLUSTER} --zone ${GCP_ZONE} --project ${GCP_PROJECT}"
+
+            stage('Push image') {
+              sh "gcloud docker -- push ${IMAGE_TAG}"
+            }
+
+            stage('Deploy') {
+              sh "sed -i.bak 's#APP_NAME#${APP_NAME}#' ./k8s/deployment.yaml"
+              sh "sed -i.bak 's#IMAGE_TAG#${IMAGE_TAG}#' ./k8s/deployment.yaml"
+              sh "sed -i.bak 's#NAMESPACE#${NAMESPACE}#' ./k8s/deployment.yaml"
+
+              sh 'cat ./k8s/deployment.yaml';
+
+              // Create namespace if it doesn't exist
+              sh "kubectl get ns ${NAMESPACE} || kubectl create ns ${NAMESPACE}"
+              sh "kubectl apply -f ./k8s/deployment.yaml"
+            }
+        }
     }
-  }
-
-  stage('Push image') {
-    sh "gcloud docker -- push ${IMAGE_TAG}"
-  }
-
-  stage('Deploy') {
-    sh "sed -i.bak 's#APP_NAME#${APP_NAME}#' ./k8s/deployment.yaml"
-    sh "sed -i.bak 's#IMAGE_TAG#${IMAGE_TAG}#' ./k8s/deployment.yaml"
-    sh "sed -i.bak 's#NAMESPACE#${NAMESPACE}#' ./k8s/deployment.yaml"
-
-    sh 'cat ./k8s/deployment.yaml';
-
-    // Create namespace if it doesn't exist
-    sh "kubectl get ns ${NAMESPACE} || kubectl create ns ${NAMESPACE}"
-    sh "kubectl apply -f ./k8s/deployment.yaml"
   }
 }
