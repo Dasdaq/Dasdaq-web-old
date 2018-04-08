@@ -1,7 +1,7 @@
 <template>
   <div class="GameRank">
     <div>
-      <a href="http://mitao.io" target="_blank">
+      <a href="http://www.bitsoccer.io/" target="_blank">
         广告: {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}} </a>
     </div>
 
