@@ -11,7 +11,7 @@ export const i18n = [{
   default: true,
   langDisplay: 'Japanese',
   locale: 'jp',
-};
+}];
 
 export const disqus = {
   shortname: 'dapdap',
