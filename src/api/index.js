@@ -96,7 +96,7 @@ export const getUser = async (address) => {
 };
 
 export const getAppsRanking = async () => {
-  const response = await axios.get(`${apiHost}/dapps`);
+  const response = await axios.get(`${apiHost}/dapps2`);
   const d = response.data.data;
 
   d.forEach((v) => {
@@ -112,6 +112,5 @@ export const getAppsRanking = async () => {
       v[key] = _.round(v[key], 2);
     });
   });
-
   return d;
 };

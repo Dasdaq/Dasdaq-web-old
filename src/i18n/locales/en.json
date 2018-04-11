@@ -1,6 +1,6 @@
 {
   "config": {
-    "submitAppUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd1pc50EqQ5S7A7OxBBCcciloQWjpEcCJ9Uii_E4iUxrlI7dg/viewform"
+    "submitAppUrl": "https://docs.google.com/forms/d/e/1FAIpQLScLcEWsAPX3NiFa3ggalQEN7saHIFhFjvPmu7xcuI1WTirJiA/viewform"
   },
   "header": {
     "nav": {
@@ -8,11 +8,16 @@
       "myPage": "Profile",
       "submitApp": "Submit DApp",
       "signIn": "Sign In",
-      "explore": "Explore"
+      "explore": "Explore",
+      "headLine": "headLine"
     }
   },
   "footer": {
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "blogroll": "Blogroll"
+  },
+  "blogroll": {
+    "goyougame": "goyougame"
   },
   "HomeView": {
     "hero": {
@@ -32,6 +37,10 @@
       "txLastDay": "Tx 24h",
       "txLastWeek": "Tx 7d",
       "dauLastDay": "DAU"
+    },
+    "adList": {
+      "sanguo": "BitSoccer",
+      "sanguo-slogan": "Soccer Manager Pre-Sale.  Get Ronaldo for free!"
     },
     "userList": {
       "tabTitle": "User Ranking"

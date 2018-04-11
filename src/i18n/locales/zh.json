@@ -8,11 +8,16 @@
       "myPage": "我的",
       "submitApp": "提交Dapp",
       "signIn": "登录",
-      "explore": "发现"
+      "explore": "发现",
+      "headLine": "头条"
     }
   },
   "footer": {
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "blogroll": "友情链接"
+  },
+  "blogroll": {
+    "goyougame": "goyougame"
   },
   "HomeView": {
     "hero": {
@@ -32,6 +37,10 @@
       "txLastDay": "24小时交易笔数",
       "txLastWeek": "7天交易笔数",
       "dauLastDay": "日活跃用户数"
+    },
+    "adList": {
+      "sanguo": "BitSoccer",
+      "sanguo-slogan": "足球经理预售啦！今天抽梅西，明天换嫩模！"
     },
     "userList": {
       "tabTitle": "用户排行榜"

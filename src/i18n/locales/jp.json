@@ -1,6 +1,6 @@
 {
   "config": {
-    "submitAppUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd1pc50EqQ5S7A7OxBBCcciloQWjpEcCJ9Uii_E4iUxrlI7dg/viewform"
+    "submitAppUrl": "https://docs.google.com/forms/d/e/1FAIpQLScLcEWsAPX3NiFa3ggalQEN7saHIFhFjvPmu7xcuI1WTirJiA/viewform"
   },
   "header": {
     "nav": {
@@ -8,11 +8,16 @@
       "myPage": "プロフィール",
       "submitApp": "Submit DApp",
       "signIn": "サインイン",
-      "explore": "もっと知る"
+      "explore": "もっと知る",
+      "headLine": "トップ"
     }
   },
   "footer": {
-    "contact": "連絡先"
+    "contact": "連絡先",
+    "blogroll": "友情リンク"
+  },
+  "blogroll": {
+    "goyougame": "goyougame"
   },
   "HomeView": {
     "hero": {
@@ -32,6 +37,10 @@
       "txLastDay": "Tx 24時間",
       "txLastWeek": "Tx 7日",
       "dauLastDay": "DAU"
+    },
+    "adList": {
+      "sanguo": "BitSoccer",
+      "sanguo-slogan": "Soccer Manager Pre-Sale.  Get Ronaldo for free!"
     },
     "userList": {
       "tabTitle": "ユーザーランキング"
