@@ -68,7 +68,7 @@
     <br/>
 
     <div>
-      <a class="item-ad-title" href="http://mitao.io" target="_blank">
+      <a class="item-ad-title" href="http://www.bitsoccer.io/" target="_blank">
         * {{$t('HomeView.adList.sanguo')}} - {{$t('HomeView.adList.sanguo-slogan')}}
       </a>
     </div>

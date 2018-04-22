@@ -3,7 +3,7 @@
     <div class="columns user-profile box">
       <div class="column is-one-quarter">
         <figure class="user-avatar image is-128x128">
-          <img src="../../assets/avatar.png">
+          <img :src="avatar" v-if="avatar">
         </figure>
       </div>
       <div class="column">
@@ -55,6 +55,7 @@
 
 <script>
 import Disqus from 'vue-disqus/VueDisqus';
+import getAvatar from 'dravatar';
 import { getUser } from '@/api';
 
 export default {
@@ -68,6 +69,7 @@ export default {
     return {
       activeTab: 0,
       user: {},
+      avatar: null,
     };
   },
 
@@ -75,12 +77,17 @@ export default {
     address() {
       return this.$route.params.address.toUpperCase();
     },
+    addr() {
+      // Uppercase cause error for identicon
+      return this.$route.params.address;
+    },
     playedDApps() {
       return this.user ? this.user.playedDApps : [];
     },
   },
 
   async created() {
+    this.avatar = await getAvatar(this.addr);
     this.user = await getUser(this.address);
   },
 
