@@ -135,8 +135,10 @@ export default {
   max-height: 3rem;
   float: left;
 }
+.is-primary .info {
+  color: white;
+}
 .info {
-    float: left;
-    color: white;
+  float: left;
 }
 </style>
