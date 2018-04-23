@@ -51,6 +51,11 @@
                      class=""
                      :to="{ name: 'UserView', params:{address: me.address}}">
                      <img :src="getAvatar" class="avatar" />
+                     <span class="info">
+                     <p> {{getBalance}} ETH </p>
+                     <p> {{getNetwork}}</p>
+                     </span>
+
                      </router-link>
               <a v-else
                 class="button is-primary" @click="onSignIn">
@@ -76,6 +81,7 @@
 import { mapState } from 'vuex';
 import I18nSwitcher from '@/components/I18nSwitcher';
 import Dravatar from 'dravatar';
+import { getNetwork as network } from '@/api';
 
 export default {
   name: 'Header',
@@ -95,6 +101,13 @@ export default {
 
   computed: {
     ...mapState(['me', 'signInError']),
+    getBalance() {
+      const weiToEth = wei => wei / 1000000000000000000;
+      return weiToEth(this.me.balance).toFixed(2);
+    },
+    getNetwork() {
+      return network.name;
+    },
   },
 
   created() {
@@ -119,6 +132,11 @@ export default {
 .avatar {
   border-radius: 100%;
   margin-right: 5px;
-  max-height: 2.2rem;
+  max-height: 3rem;
+  float: left;
+}
+.info {
+    float: left;
+    color: white;
 }
 </style>
