@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 import _ from 'lodash';
 import axios from 'axios';
 import web3 from '@/web3';
-import { apiHost } from '@/config';
+import { apiHost, network } from '@/config';
 
 export const getLocale = () => {
   const locale = Cookie.get('locale') || (navigator.language || navigator.browserLanguage || navigator.userLanguage).toLowerCase();
@@ -32,6 +32,8 @@ export const getMe = async () => {
   }
   throw Error('METAMASK_LOCKED');
 };
+
+export const getNetwork = network[web3.version.network];
 
 export const getPlayers = async (itemId) => {
   const response = await axios.get(`${apiHost}/dapps/${itemId}/top`);
