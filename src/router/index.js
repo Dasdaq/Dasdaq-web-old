@@ -6,6 +6,7 @@ import ItemView from '@/components/ItemView';
 import UserView from '@/components/UserView';
 import NotFoundView from '@/views/NotFoundView';
 import OnChainView from '@/views/OnChainView';
+import AirdropView from '@/views/AirdropView';
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/onChain',
       component: OnChainView,
     },
+    {
+      name: 'Airdrop',
+      path: '/airdrop',
+      component: AirdropView,
+    },    
     {
       name: 'NotFoundView',
       path: '*',

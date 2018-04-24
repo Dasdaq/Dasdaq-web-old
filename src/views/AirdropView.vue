@@ -4,8 +4,14 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        Point Card Redeem
+        一键上链服务
       </h1>
+      <figure class="image">
+      <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqo5xgdrfaj31kw0w10ux.jpg" alt="">
+    </figure>
+      <h2 class="subtitle">
+        雷猴，我系 Ethereum Evergarden，你的区块链信使。有什么要我帮忙传达给全世界吗？我们提供信息一键上链服务！
+      </h2>
     </div>
   </div>
 </section>
@@ -28,7 +34,7 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        Success!
+        上链失败
       </h1>
       <h2 class="subtitle">
         {{result.msg}}
@@ -40,25 +46,19 @@
 </div>
 
     <div class="field">
-       <div class="control">
-            <textarea id="public-key" class="textarea is-primary"
-            type="text" placeholder="Public Key:">
+        <div class="control">
+            <textarea class="textarea is-primary"
+            v-model="inputData"
+            type="text" placeholder="把你想说的话写在这里吧">
             </textarea>
-       </div>
-       <div class="control">
-            <textarea id="private-key" class="textarea is-primary"
-            type="text" placeholder="Private Key:">
-            </textarea>
-       </div>  
-       <div class="control">
-            <textarea id="tx" class="textarea is-primary"
-            type="text" placeholder="tx:">
-            </textarea>
-       </div>             
+    </div>
         </div>
         <div class="field is-grouped">
     <div class="control">
-        <button class="button is-primary" @click="submitMsg">Redeem</button>
+        <button class="button is-primary" @click="submitMsg">提交</button>
+    </div>
+    <div class="control">
+        <button class="button is-danger">清空</button>
     </div>
     </div>
 
@@ -87,25 +87,15 @@ export default {
   },
   methods: {
     async submitMsg() {
-      const result = await request.get(`http://47.75.69.142:5000/new`);
-      console.log(result.data);
-      const pri = result.data["private key"];
-      const add = result.data[`address`];
-      const tx = result.data.tx;
-      this.result = result;
-    //    console.log($('tx')[0]);    
-      console.log( document.getElementById("public-key"));
- document.getElementById("public-key").value = add;
-        document.getElementById("private-key").value= pri; 
-        document.getElementById('tx').value = "https://kovan.etherscan.io/tx/" + tx; 
-
-      if (result.ok === 1) { 
-   //     console.log($('tx')[0]);    
-//        console.log(result);
+      const str = this.inputData;
+      const result = await request.get(`http://api.dapdap.io/write/${str}`);
+      const payload = result.data;
+      this.result = payload;
+      if (payload.ok === 1) {
+        console.log(payload);
       } else {
-  //      console.error(result.msg);
+        console.error(payload.msg);
       }
-
     },
   },
 };
