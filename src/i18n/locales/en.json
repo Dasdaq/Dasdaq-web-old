@@ -9,7 +9,8 @@
       "submitApp": "Submit DApp",
       "signIn": "Sign In",
       "explore": "Explore",
-      "headLine": "headLine"
+      "headLine": "headLine",
+      "OneClickToBlockchain": "Upload Message to Blockchain"
     }
   },
   "footer": {
