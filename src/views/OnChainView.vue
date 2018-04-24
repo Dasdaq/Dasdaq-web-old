@@ -82,7 +82,7 @@ export default {
     },
     getEtherScanUrl() {
       const tx = this.result.tx;
-      return `http://etherscan.io/tx/${tx}`;
+      return `http://ropsten.etherscan.io/tx/${tx}`;
     },
   },
   methods: {
