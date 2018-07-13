@@ -2,13 +2,12 @@
   <main class="HomeView">
     <section class="hero is-primary is-fullheight">
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <div class="animated bounceInDown box">
-            <h1 class="title">
-              <img src="../assets/heroLogo.png"
-                   :alt="$t('HomeView.hero.title')" />
+        <div class="container">
+            <h1 class="title" style="font-size: 6rem; color: #FFF;">
+              {{$t('HomeView.hero.title')}}
+              <!-- <img src="../assets/heroLogo.png"
+                   :alt="" /> -->
             </h1>
-          </div>
 
           <h2 class="animated fadeIn subtitle home-hero">
             {{$t('HomeView.hero.subtitle')}}
