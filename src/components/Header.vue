@@ -37,31 +37,7 @@
                 <span>
                   {{$t('header.nav.submitApp')}}
                 </span>
-        </a>
-          <router-link class="navbar-item "
-                     :to="{ name: 'uploadToBlockchain'}">
-                <span class="icon is-left">
-                  <i class="mdi mdi-upload"></i>
-                </span>
-                <span>
-                  {{$t('header.nav.OneClickToBlockchain')}}
-                </span>
-                <span class="tag is-danger">
-                  Beta
-                </span>
-          </router-link>
-          <router-link class="navbar-item "
-                     :to="{ name: 'uploadToBlockchain'}">
-                <span class="icon is-left">
-                  <i class="mdi mdi-upload"></i>
-                </span>
-                <span>
-                  {{$t('header.nav.Airdrop')}}
-                </span>
-                <span class="tag is-danger">
-                   Beta
-                </span>
-          </router-link>          
+        </a>         
       </div>
 
       <div class="navbar-end">
