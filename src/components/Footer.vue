@@ -5,10 +5,11 @@
         {{$t('footer.blogroll')}}
       </div>
       <div class="content has-text-centered column">
+        <h1 class="title">Dasdaq</h1>
         <p>
           <small>
-            All rights reserved. <br> &copy; Copyright 2018
-            <strong>Dasdaq</strong>
+            All rights reserved. <br> 
+            &copy; Dasdaq Copyright 2018
           </small>
         </p>
       </div>
