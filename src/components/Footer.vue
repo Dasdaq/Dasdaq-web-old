@@ -2,7 +2,7 @@
   <footer class="Footer">
     <div class="columns">
       <div class="has-text-left column">
-        {{$t('footer.blogroll')}}
+        <!-- {{$t('footer.blogroll')}} -->
       </div>
       <div class="content has-text-centered column">
         <h1 class="title">Dasdaq</h1>
