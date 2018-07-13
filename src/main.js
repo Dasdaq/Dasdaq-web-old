@@ -6,7 +6,7 @@ import * as config from '@/config';
 import 'normalize.css';
 import Buefy from 'buefy';
 import AsyncComputed from 'vue-async-computed';
-import 'buefy/lib/buefy.css';
+// import 'buefy/lib/buefy.css';
 // https://github.com/ecomfe/vue-echarts/blob/master/demo/Demo.vue
 import ECharts from 'vue-echarts/components/ECharts';
 import App from './App';
