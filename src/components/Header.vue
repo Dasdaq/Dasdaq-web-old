@@ -56,7 +56,7 @@
                   <i class="mdi mdi-upload"></i>
                 </span>
                 <span>
-                  {{$t('header.nav.Airdrop')}}。
+                  {{$t('header.nav.Airdrop')}}
                 </span>
                 <span class="tag is-danger">
                    Beta
