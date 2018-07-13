@@ -14,10 +14,10 @@ export const i18n = [{
 }];
 
 export const disqus = {
-  shortname: 'dapdap',
+  shortname: 'Dasdaq',
 };
 
-export const apiHost = 'http://api.dapdap.io';
+export const apiHost = 'http://api.Dasdaq.io';
 export const submitDappLink = 'https://baidu.com';
 
 export const network = {

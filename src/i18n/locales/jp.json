@@ -4,7 +4,7 @@
   },
   "header": {
     "nav": {
-      "siteName": "DapDap",
+      "siteName": "Dasdaq",
       "myPage": "プロフィール",
       "submitApp": "Submit DApp",
       "signIn": "サインイン",
@@ -21,8 +21,8 @@
   },
   "HomeView": {
     "hero": {
-      "title": "DapDap",
-      "subtitle": "分散型台帳技術を使ったイーサリウムアプリケーション（DapDap）についてもっと知る",
+      "title": "Dasdaq",
+      "subtitle": "分散型台帳技術を使ったイーサリウムアプリケーション（Dasdaq）についてもっと知る",
       "explore": "もっと知る"
     },
     "appList": {

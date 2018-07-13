@@ -4,7 +4,7 @@
   },
   "header": {
     "nav": {
-      "siteName": "DapDap",
+      "siteName": "Dasdaq",
       "myPage": "Profile",
       "submitApp": "Submit DApp",
       "signIn": "Sign In",
@@ -22,7 +22,7 @@
   },
   "HomeView": {
     "hero": {
-      "title": "DapDap",
+      "title": "Dasdaq",
       "subtitle": "Explore most popular decentralized ethereum applications (Dapps)",
       "explore": "Explore"
     },

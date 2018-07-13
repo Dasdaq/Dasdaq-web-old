@@ -3,23 +3,20 @@
     <div class="columns">
       <div class="has-text-left column">
         {{$t('footer.blogroll')}}
-        <a href="http://goyougame.com/" class="icon" style="vertical-align:middle">
-          <img src="/static/images/header/goyougame.png" alt="goyougame" /></a>
-        <a href="http://goyougame.com/" target="_blank">{{$t('blogroll.goyougame')}}</a>
       </div>
       <div class="content has-text-centered column">
         <p>
           <small>
             All rights reserved. <br> &copy; Copyright 2018
-            <strong>DapDap</strong>
+            <strong>Dasdaq</strong>
           </small>
         </p>
       </div>
       <div class="has-text-right column">
-        <a href="mailto:www.dapdap.io@gmail.com" class="icon">
-          <img src="/static/images/header/gmail.png" alt="gmail" /></a>
-        <a href="https://jq.qq.com/?_wv=1027&k=5e9frrq" class="icon">
-          <img src="/static/images/header/qq.png" alt="qq" /></a>
+        <h1>我们的社区</h1>
+        <a :href="contact.url" v-for="contact in contacts" :key="contact">
+          <i :class="getIconName(contact)"></i>
+          </a>
       </div>
     </div>
   </footer>
@@ -32,14 +29,37 @@ export default {
   components: {},
 
   data() {
-    return {};
+    return {
+      contacts: [
+        {
+          way: 'email',
+          url: 'mailto:www.Dasdaq.io@gmail.com',
+        },
+        {
+          way: 'qqchat',
+          url: 'https://jq.qq.com/?_wv=1027&k=5e9frrq',
+        },
+        {
+          way: 'telegram',
+          url: 'https://t.me/joinchat/CWXWGxEc4QOpJ7N2b7FuFg',
+        },
+        {
+          way: 'discord',
+          url: 'https://discord.gg/7Jtpkwr',
+        },
+      ],
+    };
   },
 
   computed: {},
 
   created() {},
 
-  methods: {},
+  methods: {
+    getIconName({ way, url }) {
+      return `mdi mdi-${way}`;
+    },
+  },
 
   watch: {},
 
@@ -50,5 +70,8 @@ export default {
 <style scoped>
 .Footer {
   padding: 2vw;
+}
+.mdi {
+  font-size: 3rem;
 }
 </style>

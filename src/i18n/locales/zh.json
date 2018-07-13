@@ -4,7 +4,7 @@
   },
   "header": {
     "nav": {
-      "siteName": "DapDap",
+      "siteName": "Dasdaq",
       "myPage": "我的",
       "submitApp": "提交Dapp",
       "signIn": "登录",
@@ -23,7 +23,7 @@
   },
   "HomeView": {
     "hero": {
-      "title": "DapDap",
+      "title": "Dasdaq",
       "subtitle": "发现时下最流行的去中心化应用（Dapps）",
       "explore": "发现"
     },
