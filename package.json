@@ -23,6 +23,7 @@
     "caniuse-lite": "^1.0.30000830",
     "dravatar": "^1.0.2",
     "echarts": "^4.0.4",
+    "estraverse": "^4.3.0",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.5",
     "normalize.css": "^7.0.0",

@@ -37,7 +37,7 @@
                 <span>
                   {{$t('header.nav.submitApp')}}
                 </span>
-        </a>         
+        </a>
       </div>
 
       <div class="navbar-end">

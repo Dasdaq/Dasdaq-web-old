@@ -35,7 +35,7 @@ export default new Router({
       name: 'Airdrop',
       path: '/airdrop',
       component: AirdropView,
-    },    
+    },
     {
       name: 'NotFoundView',
       path: '*',

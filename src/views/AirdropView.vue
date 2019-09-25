@@ -92,9 +92,9 @@ export default {
       const payload = result.data;
       this.result = payload;
       if (payload.ok === 1) {
-        console.log(payload);
+        // console.log(payload);
       } else {
-        console.error(payload.msg);
+        // console.error(payload.msg);
       }
     },
   },

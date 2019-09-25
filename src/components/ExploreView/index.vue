@@ -16,8 +16,7 @@
 <script>
 import GameRank from '@/components/HomeView/GameRank';
 import PlayerRank from '@/components/HomeView/PlayerRank';
-import { getAppsRanking } from '@/api';
-import { getUser } from '@/api';
+import { getAppsRanking, getUser } from '@/api';
 
 export default {
   name: 'ExploreView',
@@ -31,7 +30,7 @@ export default {
     return {
       activeTab: 0,
       item: [],
-      pitem: []
+      pitem: [],
     };
   },
 
@@ -44,7 +43,7 @@ export default {
 
   methods: {},
 
-  watch: {}
+  watch: {},
 };
 </script>
 

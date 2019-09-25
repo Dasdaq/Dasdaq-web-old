@@ -8,7 +8,7 @@
         <h1 class="title">Dasdaq</h1>
         <p>
           <small>
-            All rights reserved. <br> 
+            All rights reserved. <br>
             &copy; Dasdaq Copyright 2018
           </small>
         </p>
@@ -57,7 +57,7 @@ export default {
   created() {},
 
   methods: {
-    getIconName({ way, url }) {
+    getIconName({ way }) {
       return `mdi mdi-${way}`;
     },
   },
